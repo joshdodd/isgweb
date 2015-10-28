@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<!-- Mirrored from getbootstrap.com/ by HTTrack Website Copier/3.x [XR&CO'2013], Wed, 02 Oct 2013 12:11:05 GMT -->
+
+<head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="author">
+
+    <title>America's Essential Hospitals</title>
+    <link href="dist/css/bootstrap.css" rel="stylesheet"><!-- Bootstrap core CSS -->
+    <link href="assets/css/docs.css" rel="stylesheet"><!-- Documentation extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"><!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <link href='http://fonts.googleapis.com/css?family=Cabin:400,600,700,400italic,600italic,700,italic' rel='stylesheet' type='text/css'>
+    <!--[if lt IE 9]>
+  <script src="./assets/js/html5shiv.js"></script>
+  <script src="./assets/js/respond.min.js"></script>
+<![endif]-->
+    <!-- Favicons -->
+    <link href="assets/ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+    <link href="assets/ico/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+    <link href="assets/ico/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+    <link href="assets/ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon-precomposed">
+    <link href="assets/ico/favicon.png" rel="shortcut icon"><!-- Place anything custom after this. -->
+</head>
+
+<body>
+    <a class="sr-only" href="#content">Skip navigation</a> <!-- Docs master nav -->
+
+    <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-target=".bs-navbar-collapse" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button> <a class="navbar-brand" href="/index.html">
+                     <img src="assets/img/header.png"> 
+            </a>
+            </div>
+
+            <nav class="collapse navbar-collapse bs-navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li >
+                        <a href="index.html">General Guide</a>
+                    </li>
+
+                    <li class="active">
+                        <a href="advanced.html">Advanced Guide</a>
+                    </li>
+                 
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Docs page layout -->
+    <!-- Page Header
+    <div class="bs-header" id="content">
+      <div class="container">
+        <h1>Getting started</h1>
+        <p>An overview of Bootstrap, how to download and use, basic templates and examples, and more.</p>
+      </div>
+    </div>
+    -->
+
+    <div class="container bs-docs-container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="bs-sidebar hidden-print">
+                    <ul class="nav bs-sidenav">
+                        <li>
+                            <a href="#overview">Overview</a>
+                        </li>
+
+                        <li>
+                            <a href="#getting-started">Getting Started</a>
+                            <ul class="nav">
+                                <li><a href="#login">Logging In</a></li>
+                                <li><a href="#dashboard">Dashboard</a></li>
+                                <li><a href"#menu-options">Menu Options</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#posts">Creating and Editing Posts</a>
+                            <ul class="nav">
+                                <li><a href="#posts-add">Adding a New Post</a></li>
+                                <li><a href="#posts-format">Formatting Post Content</a></li>
+                                <li><a href="#posts-links">Adding Links to Posts</a></li>
+                                <li><a href="#posts-img">Adding Images to posts</a></li>
+                                <li><a href="#posts-pdf">Adding PDF Files into a Post</a></li>
+                                <li><a href="#posts-vid">Inserting Video, Audio, or Other File Type</a></li>
+                                <li><a href="#posts-embed">Embedding Videos into a post</a></li>
+                                <li><a href="#posts-tips">Formatting Tips</a></li>
+                                <li><a href="#posts-other">Other Post Fields</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#saving">Saving and Publishing Posts</a>
+                            <ul class="nav">
+                                <li><a href="#removing">Removing a Post or Page</a></li>                                
+                            </ul>
+
+                        </li>
+
+                        <li>
+                            <a href="#tax">Taxonomy/Publishing Rules for Each Section</a>
+                            <ul class="nav">
+                                  <li><a href="#tax-overview">Overview of Taxonomy</a></li>
+                                  <li><a href="#tax-manage">Managing Taxonomy</a></li>
+                                  <li><a href="#tax-rules">Specific Rules For Content Areas</a></li>
+                              </ul>  
+                        </li>
+
+                        <li>
+                            <a href="#pages">Creating and Editing Pages</a>
+                            <ul class="nav">
+                                <li><a href="#pages-overview">Overview</a></li>
+                                <li><a href="#pages-new">Adding new Pages</a></li>
+                                <li><a href="#pages-templates">Page Template Outline</a></li>
+                          
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#temp">Editing Specific Page Templates</a>
+                            <ul class="nav">
+                                <li><a href="#temp-default">Default</a></li>
+                                <li><a href="#temp-home">Homepage</a></li>
+                                <li><a href="#temp-landing">Landing Pages</a></li>
+                                <li><a href="#temp-branded">Branded Content Areas</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#announce">Adding Announcements</a>
+                            <ul class="nav">
+                                <li><a href="#announce-overvire">Overview</a></li>
+                                <li><a href="#announce-create">Creating Announcements</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#menus">Editing Page Menus</a>
+                            <ul class="nav">
+                                <li><a href="#menus-overview">Overview</a></li>
+                                <li><a href="#menus-new">Adding a New Menu Item</a></li>
+                                <li><a href="#menus-custom">Adding a Custom Link Menu Item</a></li>
+                                <li><a href="#menus-delete">Deleting a Menu Item</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#comments">Moderating Comments</a>
+                        </li>
+
+                        <li>
+                            <a href="#disc">Managing Discussions</a>
+                            <ul class="nav">
+                                <li><a href="#disc-overview">Overview</a></li>
+                                <li><a href="#disc-mod">Approving and Editing Discussions</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#users">Managing Users</a>
+                            <ul class="nav">
+                                <li><a href="#users-overview">Overview</a></li>
+                                <li><a href="#users-roles">User Roles</a></li>
+                                <li><a href="#users-add">Adding users </a></li>
+                                <li><a href="#users-remove">Removing users</a></li>
+                                <li><a href="#users-edit">Editing User Profile Information</a></li>
+                            </ul>
+                        </li>
+                         <li>
+                            <a href="#publish">Publishing Process</a>
+                            <ul class="nav">
+                              
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                <!-- Overview
+  ================================================== -->
+
+                <div class="bs-docs-section">
+                    <div class="page-header">
+                        <h1 id="overview">Overview</h1>
+                    </div>
+
+                    <p > 
+                        Welcome to the America’s Essential Hospitals online support guide. This interactive guide will give you an overall understanding of how to use various features within the content management system (CMS) for America’s Essential Hospitals.  A CMS is a centralized location where a user can login and manage, edit and publish content to a website, without the knowledge of website development or programing.</p>
+                    <p>
+                        The guide can be used as a step-by-step manual to learn the ins and outs of updating web content, or it can be used as a reference guide. Please use the navigation menu on the left to quickly jump to any section. If you run into an issue that you cannot solve with the contents of this guide, please contact a member of the communications team.
+                    </p>
+
+
+
+                    
+                </div>
+
+                <!-- Getting Started
+  ================================================== -->
+
+                <div class="bs-docs-section">
+                    <div class="page-header">
+                        <h1 id="getting-started">Getting Started</h1>
+                    </div>
+
+                    <h2 id="login">Logging In</h2>
+                    <p>Before you can make any changes to the site, you need to log in. Click the “Staff Login” link in the header or footer of America’s Essential Hospitals’ homepage, or go directly to <a href="http://essentialhospitals.org/wp-admin" target="_blank">http://essentialhospitals.org/wp-admin</a>. Log in with the username and password that has been emailed to you. If you do not have an account, request one by emailing a member of the  communications team.</p>
+
+                    <h2 id="dashboard">Dashboard</h2>
+
+                    <p>Once you’ve logged in, the dashboard appears. This is your main administration homepage. At the very top of your dashboard (and across every page) you will see the admin toolbar. The toolbar is a way of easily accessing some of the most common CMS features. As long as you are logged in, the toolbar will be visible when you’re looking at the CMS and when you visit a page of the website itself in your browser. This bar only appears if you are currently logged into the CMS, which means that it won’t be visible to site visitors.</p>
+                    <p>From the dashboard view, just below the toolbar, you will see two dropdowns: Screen Options and Help. The Screen Options dropdown allows you to control the amount of items you can see on a screen--this is a very useful feature that is consistent on every page in the CMS. Also on your dashboard you will see multiple dashboard panels. These panels give you a quick overview of the content on your site and provide quick access to specific areas of the CMS.</p>
+
+                    <h2 id="menu-options">Dashboard Menu Items</h2>
+
+                    <p>Down the left side of the dashboard on every page, you will see your main admin navigation menu. This is where you’ll find all the options to update and configure your site.</p>
+                    <p>Hovering your cursor over each of the main menu options will display a ‘fly-out’ menu with various choices for that particular menu option. Once you click each of the main menu options, that particular menu will expand to show all the available options within that section. Based on your account access level, you may be limited to specific menu options.
+
+                    <p>The main menu options and their usage are:</p></p>
+
+                    [put in section icons for each...]
+
+                    <h3>Dashboard</h3>
+                    <p>This will display your main dashboard. </p>
+
+                    <h3>Blog</h3>
+                    <p>This is where you can create a new blog post.  </p>
+
+                    <h3>Action</h3>
+                    <p>This is where you can create new content within the Action section of the website. .</p>
+
+                    <h3>Quality</h3>
+                    <p>This is where you can create new content within the Quality section of the website. </p>
+
+                    <h3>Institute</h3>
+                    <p>This is where you can create new content within the Institute section (including the Research and Transformation Centers) of the website. </p>
+
+                    <h3>Announcements</h3>
+                    <p>This is where you can create a new Announcement that can be posted throughout the website. Announcements can be displayed on the homepage, on any landing page for each website section or on the Member Network User Dashboard.</p>
+
+                    <h3>General (Pages)</h3>
+                    <p>This is where you create and maintain all the pages of general content mainly found in the utilities navigation section of the website (the menu at the very top of the website).</p>
+
+                    <h3>Groups and Educational Programs</h3>
+                    <p>This is where you can create and maintain all private groups and educational programs that exist within the Member Network.</p>
+                    <h3>
+                        Webinars</h3>
+                    <p>This is where you can create and maintain all webinars, those with both public and private access. You can also update the webinar topics.</p>
+
+
+                    <h3>Media</h3>
+                    <p>This is where all the images, documents or files anywhere on the site are stored. You can browse through the media library, as well as upload and update the files.</p>
+
+                    <h3>Comments</h3>
+                    <p>You can manage all your comments within this section, including approving comments, replying, or marking them as spam.</p>
+
+                    <h3>Discussions</h3>
+                    <p>You can manage all discussions from the Member Network within this section, including moderating all public and private discussions.</p>
+
+                    <h3>Appearance</h3>
+                    <p>This menu is where Super Admins control how your site looks, manage your site Widgets or Menus and even edit your site theme files. This section is mainly used to control the navigation menus on the website. This section should only be accessed by users with “Super Admin Access” level.</p>
+
+                    <h3>Plugins</h3>
+                    <p>Plugins extend and expand the functionality of your website. Super Admins can add or delete plugins within here, as well as activate or deactivate them. This section should only be accessed by users with “Super Admin Access” level.</p>
+
+                    <h3>Users</h3>
+                    <p>This screen lists all the existing users for your site.  Super Admins can add new users ,as well as manage user roles.</p>
+
+                    <h3>Tools</h3>
+                    <p>This section gives you access to specific tools  for the CMS, however this website will not use these specific tools. This section should only be accessed by users with “Super Admin Access” level.</p>
+
+                    <h3>Settings</h3>
+                    <p>This is where your site is configured. Among other things, it allows  Super Admins to configure your site name and URL , where your posts appear, whether people can leave post comments or not, and numerous other settings. Most times, once your site is setup, there's no need to change any of the settings within this section. This section should only be accessed by users with “Super Admin Access” level.</p>
+
+
+
+                    <div class="bs-callout bs-callout-danger">
+                        <h4>Callout</h4>
+
+                        <p> This can be used for a callout</p>
+                    </div>
+                </div>
+
+ 
+
+
+                <!-- Creating and Editing Posts
+  ================================================== -->
+
+                <div class="bs-docs-section">
+                    <div class="page-header">
+                        <h1 id="posts">Creating and Editing Posts</h1>
+                    </div>
+                    <p>To create or edit an article, first click on the menu option of where the article will be published on the website (Blog, Action, Quality, etc.) After clicking on the menu option, you will be shown a list of posts already created in that specific section of the website. The information displayed includes the post Title, Author, Tags, Number of Comments, and either the Date Published, Date Scheduled, or the Date the post was Last Modified. The screen will look similar to the screen below.</p>
+                    <p>[ Screenshot ]</p>
+
+                   <p> At the top of the page, you can view how many posts in total you have in your site, how many are Published, Scheduled, Sticky, Pending, in Draft or in the Trash.</p>
+
+                   <p> When hovering your cursor over each row, a few links will appear beneath the post title:
+
+                    <ul>
+                        <li><strong>Edit</strong> – Allows you to edit your post. This is the same as clicking on the post title</li>
+                        <li><strong>Quick Edit</strong> – Allows you to edit basic post information such as Title, Slug (shortened URL), and Date, plus a few other options</li>
+                        <li><strong>Trash </strong>– Sends the post to the Trash. Once the trash is emptied, the page is deleted permanently</li>
+                        <li><strong>View</strong> – Displays the post. If the post hasn’t been published yet, this will say Preview</li>
+                    </ul>
+
+                    <p> You can also filter the pages that are displayed using the dropdown lists and the Filter button.</p>
+                    
+                    <h2 id="posts-add">Adding a New Post</h2>
+                    <p>To add a new post, click the Add New link in the left navigation. You will be presented with a page similar to the image below.
+
+                     [ Screenshot ]
+
+                    <p>The first thing you will want to do is give your post a title. Simply enter a title into the text field that reads “Enter title here.”.</p>
+
+                    <p>Once you enter a title, a permalink will automatically be generated. A permalink is the actual permanent URL of the article when the post is published live. You can edit the permalink by clicking the “Edit” button to the right of the permalink..</p>
+
+                    <h2 id="posts-format">Formatting Post Content</h2>
+                    <p>The tool used to enter content into your post is very similar to a regular word processor, like MS Word, with toolbar buttons that allow you to format the text. At the top of the editor window, there are two tabs: “Visual” and “Text”. These switch the editor view between the Visual editor and the Text editor. The Text view will enable you to view the HTML code that makes up your content. For the more experienced users this can be helpful at times, but for those not familiar with HTML tags, it’s not recommended--stick to the Visual Editor..</p>
+
+                    <p>At the top of the editor window where you type your content, there are numerous formatting buttons. Clicking the Show/Hide Kitchen Sink button [img here] will show or hide a second line of formatting buttons that give you extra functionality. The editor buttons perform the following functions:.</p>
+
+                    <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Element</th>
+
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td><img src="assets/img/addmedia.png" width="130px;"></td>
+                                    <td><strong>Add Media</strong> – Used to upload and insert media such as images, audio, video or documents </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="assets/img/bold.png"></td>
+                                    <td><strong>Bold</strong> – Bold text</td>
+                                <tr>
+                                    <td><img src="assets/img/bold.png"></td>
+                                    <td><strong>Italic </strong>– Italicize text</td>
+                                </tr>    
+                                <tr>
+                                    <td><img src="assets/img/bold.png"></td>
+                                    <td><strong>Strikethrough</strong> – Add a strikethrough to your text</td>
+                                </tr>    
+                                <tr>
+                                    <td><img src="assets/img/bold.png"></td>
+                                    <td><strong>Unordered List</strong> – Create an unordered (bulleted) list</td>
+                                </tr>    
+
+                                <tr>
+                                    <td><img src="assets/img/bold.png"></td>
+                                    <td><strong>Ordered List</strong> – Create an ordered (numbered) list</td>
+                                </tr>    
+                                <tr>
+                                    <td><img src="assets/img/bold.png"></td>
+                                    <td><strong>Blockquote</strong> – Use for longer quotes. Indents text on both sides.</td>
+                                </tr>    
+                                <tr>
+                                    <td><img src="assets/img/bold.png"></td>
+                                    <td><strong>Align Left</strong> – Align text to the left</td>
+                                </tr>    
+                                <tr>
+                                    <td><img src="assets/img/bold.png"></td>
+                                    <td><strong>Align Center </strong>– Align text in the center of the page</td>
+                                </tr>    
+                                <tr>
+                                    <td><img src="assets/img/bold.png"></td>
+                                    <td><strong>Align Right</strong> – Align text to the right</td>
+                                </tr>    
+                                <tr>
+                                    <td><img src="assets/img/bold.png"></td>
+                                    <td><strong>Insert/edit </strong>link – Used to create an html link to another page or website. Use the cursor to select the text or image that you want to link and then click this </td>
+                                </tr>    button to add the URL
+                                <tr>
+                                    <td><img src="assets/img/bold.png"></td>
+                                    <td><strong>Unlink </strong>– Remove the html link from the selected text. Your must click the text or image with the active link before using this button.</td>
+                                </tr>    
+ 
+                                <tr>
+                                    <td><img src="assets/img/bold.png"></td>
+                                    <td><strong>Toggle fullscreen mode</strong> – Clicking this button will enlarge the editor so that it fills the browser window. Clicking the Exit fullscreen link at the top of the </td>
+                                </tr>    screen will reduce it back to its original size
+                                <tr>
+                                    <td><img src="assets/img/bold.png"></td>
+                                    <td><strong>Show/Hide Kitchen Sink</strong> – Used to show or hide the second row of formatting buttons on the editor toolbar</td>
+                                </tr>    
+
+                                <tr>
+                                    <td><img src="assets/img/bold.png"></td>
+                                    <td><strong>Style</strong> – Used to format the page text based on the styles available</td>
+                                </tr>    
+                                <tr>
+                                    <td><img src="assets/img/bold.png"></td>
+                                    <td><strong>Underline</strong> – Underline your text</td>
+                                </tr>    
+                                <tr>
+                                    <td><img src="assets/img/bold.png"></td>
+                                    <td><strong>Align Full</strong> – Align text on both the left and right (i.e. justify)</td>
+                                </tr>    
+                                <tr>
+                                    <td><img src="assets/img/bold.png"></td>
+                                    <td><strong>Select text color </strong>– Use to change the color of text</td>
+                                </tr>    
+                                <tr>
+                                    <td><img src="assets/img/bold.png"></td>
+                                    <td><strong>Paste as Plain Text</strong> – Strips formatting of original text Copying and pasting text from other sites or word processors sometimes leaves the text formatted differently that what you were expecting. The reason for this is that quite often the html tags or codes that formatted the original text are pasted along with the text itself. To avoid this, Paste as Plain Text will strip all these formatting and html tags. Checking the “keep linebreaks” checkbox to preserve all HTML <br /> tags, which tell the text editor to start a line of text on the next line. Unchecking this option will remove them.</td>
+                                </tr>    
+
+                                <tr>
+                                    <td><img src="assets/img/bold.png"></td>
+                                    <td><strong>Paste from Word</strong> – Removes additional code from text copied in MS Word. Pasted text from MS Word typically includes a huge amount of unrequired HTML tags that can leave the text formatted incorrectly. Using the Paste from Word option will remove these additional tags and clean up the HTML.</td>
+                                </tr>    
+
+                                <tr>
+                                    <td><img src="assets/img/bold.png"></td>
+                                    <td><strong>Remove formatting</strong> – Use this to remove all the formatting (e.g. Bold, Underline, text color etc.) from the highlighted text</td>
+                                </tr>    
+                                <tr>
+                                    <td><img src="assets/img/bold.png"></td>
+                                    <td><strong>Insert custom character </strong>– Use to insert special characters not easily accessible via the keyboard (e.g. ¼, ½, ¾, ©, €, ö etc.)</td>
+                                </tr>    
+                                <tr>
+                                    <td><img src="assets/img/bold.png"></td>
+                                    <td><strong>Outdent</strong> – Removes one level of indenting</td>
+                                </tr>    
+                                <tr>
+                                    <td><img src="assets/img/bold.png"></td>
+                                    <td><strong>Indent </strong>– Indents text by one level</td>
+                                </tr>    
+                                <tr>
+                                    <td><img src="assets/img/bold.png"></td>
+                                    <td><strong>Undo</strong> – Undo your last action</td>
+                                </tr>    
+
+                                <tr>
+                                    <td><img src="assets/img/bold.png"></td>
+                                    <td><strong>Redo – Redo your last action</strong></td>
+                                </tr>    
+                                <tr>
+                                    <td><img src="assets/img/bold.png"></td>
+                                    <td><strong>Help</strong> – Displays information about the WordPress visual editor along with keyboard shortcuts</td>
+                                </tr>    
+                                <tr>
+                                    <td><img src="assets/img/bold.png"></td>
+                                    <td><strong>Visual/Text </strong>– Switches the editor view between the Visual Editor and the Text editor.  The Text view will enable you to view the HTML code that makes up your content. For the more experienced users this can be helpful at times but for those not familiar with HTML tags, it’s not recommended</td>
+                                </tr>    
+                               
+                            </tbody>
+                        </table>
+
+
+                    <h2 id="posts-links">Adding Links to Posts</h2>
+                    <p>To create a link in text, highlight the text you wish to link, and then click on the link icon in the editor. Once the link icon is selected, you will see a pop-up dialog. Simply insert the web address you want to link to in the URL field (make sure to include “http://”), add a title to give meaning to the link (it will show when someone hovers over the link), and choose whether or not to open the link in a new window/tab or stay in the current window/tab.</p>
+ 
+                    <p>NOTE: The CMS makes it easy to create links internally within your website. Click on the “Link to existing content” text and use the search box to find a post or page. When you find the one you want, click on it. The text you highlighted in the editor will now link to that post or page. </p>
+
+                    <p>NOTE: Anytime you are linking to an external website (anything not on essentialhospitals.org) you should check the “Open link in a new window/tab” checkbox to force the link to open in a new window and prevent users from leaving your website. Links to other pages within our website should open in the same window.</p>
+
+                    <p>Once you’re done, click Add Link and the link has been created. Preview your content, then click your links to ensure they work properly. </p>
+
+
+                    <h2 id="posts-img">Adding Images to posts</h2>
+                    <p>To insert an image into your page/post, click the Add Media button (located above the text editor on the left side) and then simply drag your image(s) from wherever they are on your computer, into the browser window. Your file(s) will be automatically uploaded. Alternatively, click the Select Files button and then select the file(s) that you’d like to upload, using the dialog window that is displayed.</p>
+
+                    <p>[screenshot]</p>
+
+                    <p>Once your image is uploaded, your Media Library, which contains all your previously uploaded images, is displayed. The image(s) that you’ve just uploaded will be automatically selected for easy insertion into your post.</p>
+
+                    <p>The properties of the currently highlighted image will be shown on the right-hand side of the Insert Media window. These properties include the filename, the date the file was uploaded, and the image size. Here you can also change the image Title, Caption, Alt Text and Description for each image, as well as the Alignment, Link, and the Size at which the image is inserted. See below for descriptions of each.</p>
+
+                    <p>Title – is displayed as a tooltip when the mouse cursor hovers over the image in the browser. The title is important for Search Engine Optimization (SEO) and should always be considered.</p>
+
+                    <p>Caption – is displayed underneath the image as a short description</p>
+
+                    <p>Alt Text – is displayed when the browser can’t render the image. It’s also used by screen readers for visually impaired users, so it’s important to fill out this field with a description of the image. It also plays a part in your website SEO. Since search engines can’t ‘read’ images, they rely on the Alt Text. In addition, this field is a requirement for meeting federal 508 compliance.</p>
+
+                    <p>Description – is usually displayed for internal purposes on the media library page, where all uploaded files reside,  and is not required. This will not show up anywhere on the live website.</p>
+
+                    <p>For each image, you can select how you would like the image aligned, either left, center, or right, using the alignment dropdown list. It is recommend to always left align images.</p>
+
+                    <p>You can also change what the inserted image(s) will link to if a user clicks on the image, using the Link To dropdown list. It is recommend to either link to a “Custom URL” or select “None.”</p>
+
+                    <p>When your image(s) are uploaded, the CMS will also create several copies of your file at various sizes. You can choose which one you’d like to insert into the page using the size dropdown list. To insert the image at the exact size you uploaded, simply select Full Size. Next to each size listed in this dropdown will be the actual dimensions of the image, in pixels (e.g. 300 x 300). Image should be at least 600px wide in size</p>
+
+                    <p>Once you’ve selected all your images, click the “insert into post” button to insert the selected image(s) into your post at the current cursor position</p>
+
+                    <p>If you would like to further adjust an image that has been inserted into the editor, simply click or hover on the image and two icons will appear. Clicking the left icon [icon here] allows you to edit the image properties, such as the size, alignment and title. Clicking the right icon [icon here] will delete the image from your content. It will only remove the image from your page or post; it will not delete the image from your Media Library.</p>
+
+
+
+
+
+                    <h2 id="posts-pdf">Adding PDF Files into a Post</h2>
+                    <p>Uploading a PDF file to your site is very similar to uploading an image. Begin by clicking the ‘Add Media’ button. You will see the ‘Insert Media’ dialogue pop up. Simply upload the PDF file from your computer. Once it is uploaded, make sure to fill out the “attachment detail” in the right sidebar. For PDF files, it is only required to input a Title field. This is the text that will be linked to the PDF when the post is published. Also make sure the the ‘Link To:’ dropdown field is selected at ‘Media File’. Once completed, click “Insert into post” and you should see text link in your editor that links to the PDF file.</p>
+
+
+                    <h2 id="posts-vid">Inserting Video, Audio, or Other File Type</h2>
+                    <p>The procedure for inserting any other type of file into your post is exactly the same as inserting an Image. Simply click the Add Media button. Once the relevant popup window displays, perform the same steps to upload your file to your site and to insert it into your post.</p>
+
+                    <p>When inserting video or audio files, you can select Embed Media Player from the Embed or Link dropdown list in the Insert Media pop-up window to use the new audio and video players that are now built into WordPress. Supported audio/video formats include M4a, MP4, OGG, WebM, FLV, WMV, MP3, WAV and WMA files.</p>
+
+                    <div class="bs-callout bs-callout-danger">
+                        <h4>NOTE:</h4>
+
+                        <p>Check with communications staff to determine if you should instead embed the video.</p>
+                    </div>
+                    <div class="bs-callout bs-callout-info">
+                        <h4>NOTE:</h4>
+
+                        <p>Check with communications staff to determine if you should instead embed the video.</p>
+                    </div>
+
+
+                    <h2 id="posts-embed">Embedding Videos into a post</h2>
+                    <p>Another way to add video or other content into your pages is through embedding media hosted on another website. A popular example of this is embedding a YouTube video into your page. In order to embed media, you must obtain the embed code from the website hosting the media. Most of the time, you can find this by clicking the “Embed” or “Share” button beside or under the video player. The embed code will look something like this: </p>
+
+                     <pre><code class="html">&lt;iframe width="560" height="315" src="//www.youtube.com/embed/TZRtAY1n7BE" frameborder="0" allowfullscreen> &lt;/iframe>  </code></pre>
+
+                    <p>Simply copy this code, then paste it into the editor, using the “Text” view where you want the video to display. It is important that you are using the “Text” view when pasting the code in. If you are using the “Visual” editor, the video player will not be displayed.  When embedding the video, the width of the video should be no more than 580px wide.</p>
+                    
+                    <h2 id="posts-tips">Formatting Tips</h2>
+
+
+
+                    <h2 id="posts-other">Other Post Fields</h2>
+                    <p>Once you have finished editing the content of your post, it is vital to input other information about your post that will determine how the post is displayed on the live site.</p>
+
+                    <h3>Excerpts</h3>
+                    <p>Enter a short introductory text about your post. This is the text that will be displayed on the homepage and landing pages underneath the title. </p>
+
+                    <h3>External Links</h3>
+                    <p>If you want to link to an external article or resource related to the post, enter the article title and URL here. You can add multiple links by clicking the + icon at the end of each row. These links will be displayed on the sidebar of the post page. </p>
+
+                    <h3>Discussion</h3>
+                    <p>If the “Allow Comments” box is checked, visitors will be allowed to add comments to the post. By Default, this is always checked.</p>
+
+                    <h3>Author</h3>
+                    <p>This allows you to change the author of the post to another user. Not all website administrators have this option; see a communications staff person if you need this option.</p>
+
+                   <h3>Featured Image</h3>
+                    <p>A Featured Image is the image that is representative for that post that will be displayed with the article title and excerpt when it is displayed on landing pages. Setting your featured image is very similar to adding an image into your post. After clicking the “set featured image” link, a pop-up window will display that looks similar to the one that displays when you add an image to your post. You can upload a new image to use as your Featured Image or you can simply choose from one of your previously uploaded images.</p>
+
+                    <h3>Pin to Page</h3> 
+                    <p>If you want to pin, or force, the article to a specific landing page, choose the appropriate page where you want the post to be displayed. This is a request that a Super Admin will review before publishing.</p>
+
+                    <h3>Topics, Tags and Series</h3>
+                    <p>Each post must be categorized with certain taxonomy elements such as Topics, Tags, and Series. Depending on what section the post is published under, different rules apply on how to categorize content. Please refer to the Taxonomy section for specific rules. [link to taxonomy]</p>
+
+                   <h3>Revisions</h3>
+                    <p>You can revert to an old version of your post or page, and you can track the changes made to a post. This section will show you all previous revisions of the post and allow you to revert to an older version if necessary. This option will not normally be visible when you are creating a new post/page. </p>
+
+                    <h3>Post Author Notes</h3>
+                    <p>This box is used for internal purposes only so that the authors and reviewers can leave specific notes for each other within the post. This field is optional and will not be displayed on the live site. Think of this feature like “comments” in MS Word.</p>
+
+                    <h3>Other Custom Fields</h3>
+                    <p>You may see other custom input fields if you are editing a post or page that has specific content associated with it. These fields will be labeled with instructions that should help you input the correct content. Always check with a communications staff person before making changes to custom fields.</p>
+
+
+                </div>
+
+
+                <!-- Saving and Publishing Posts
+  ================================================== -->
+
+                <div class="bs-docs-section">
+                    <div class="page-header">
+                        <h1 id="saving">Saving and Publishing Posts</h1>
+                    </div>
+                    <p>
+                    Once you’ve added all your content to your post you have the option of saving the post as a draft or publishing the page. Depending on your account access level, you may or may not to be allowed to publish the post live. If you do not have “Super Admin” access rights, please refer to the [Staff Publishing Review Process Section] to learn more about the review processes.
+                    </p>
+
+                    <p>Clicking the Save Draft button will simply save your post. This is handy if you would like to come back at a later date to add more content or if you’re simply not ready to publish yet.  Clicking the Publish button will publish the post on the website.  Clicking the Preview button will show you a preview of the current post. Always preview your post before publishing it to check the formatting of the content and to ensure any links work properly.</p>
+
+                    <p>There are also several options available when saving. By default the status is set to draft, but this can be changed by clicking the Edit link just to the right of Status within the Publish panel.</p>
+                    <ul> 
+                        <li>Pending Review means the draft is waiting for review by an editor prior to publication.<li>
+                        <li>Draft means the post has not been published and remains a draft for you.</li>
+                    </ul>    
+
+<p>You can also change the visibility of the page by clicking the Edit link just to the right of Visibility within the Publish panel.</p>
+    <ul>
+        <li>Public is the default and means the page is viewable to all. </li>
+        <li>Password Protected allows you to assign a password to your page. Only people who have the password will be able to access the page.</li>
+        <li>Private hides the content from the public completely. Normal users and visitors will not be aware of private content. Users will only see the private content when logged into the website with a member account.</li>
+    </ul>
+    
+    
+
+<p>By default, when you click the Publish button, your post is published immediately. To change this, click the Edit link just to the right of “Publish on:” within the Publish panel. You can then select the date and time that you’d like to schedule your post to “go live.” You must click the Publish button after you have set the date and time fields.</p>
+
+                    
+                    
+                    <h2 id="removing">Removing a Post or Page</h2>
+
+                    <p>When you remove a post or page, in the way this guide will show you, the page or post itself is not permanently deleted, but retained in “Trash” area. A page or post only becomes lost forever when you delete it from the “Trash” area. </p>
+
+                    <p>There are two ways you can do this: The first way is, on a post listing page, place the mouse pointer over the page entry you want to remove (which will result in the options in the screenshot below being displayed), then click the “Trash” option. </p>
+                    <p> 
+                    This method is fine for removing a single post or page at a time, but if you wanted to remove many posts or pages quickly, select the checkbox next to the post(s) or page(s) you want to remove, select the Move To Trash option in the Bulk Actions drop down at the top, then press the Apply button next to it.  </p>
+                     
+                    <p>Once an item is moved to the “Trash” is can be restored. if you want to permanently delete the post or page, you must be sure to empty the “Trash” or click the “Permanently Delete” link for a single post.</p>
+
+                    <div class="bs-callout bs-callout-danger">
+                        <h4>NOTE:</h4>
+                        <p> Once a post has been published,  it can only be removed by a user with Super Admin privileges. </p>
+                    </div>
+
+
+
+                </div>
+
+
+                <!-- Taxonomy/Publishing Rules for Each Section
+  ================================================== -->
+
+                <div class="bs-docs-section">
+                    <div class="page-header">
+                        <h1 id="tax">Taxonomy/Publishing Rules for Each Section</h1>
+                    </div>
+                    
+                    <h2 id="tax-overview">Overview of Taxonomy</h2>
+                    <p>While editing posts, you will notice multiple input areas for different taxonomy elements, such as topics, tags, series, etc. These different categorizations are extremely important to each post in determining how content is organized on the website and where each post will be displayed. </p>
+
+
+                    <h2 id="tax-manage">Managing Taxonomy</h2>
+                    <p>Each taxonomy element will have a distinct set of input options. To manage a taxonomy set, click on the taxonomy link under one of the main menu items on the left navigation. For example, if you want to edit the Action Topics, click the “Action Topics” link under the Action dropdown.</p>
+                    <p>When you click on the Action Topics menu option you’ll be shown the list of topics that have already been added along with some blank fields that allow you to add a new Topic.  To add a new topic, fill in the blank fields and then click the Add New Category button: Note: the following process is the same for editing any taxonomy set.</p>
+
+                    <ul>
+                        <li><strong>Name</strong> – The name is how it appears on your site</li>
+                        <li><strong>Slug</strong> - The Slug is the URL-friendly version of the name. It is all lowercase and contains only letters, numbers, and hyphens.  If left blank, this is automatically generated.</li>
+                        <li><strong>Parent</strong> - For this website, this should always be set to “None”.</li>
+                        <li><strong>Description</strong> – This is a description of the current topic. This is only required for specific topics, such as the Institute centers.</li>
+                        <li><strong>Edith</strong></li>
+                        <li><strong>Quick Edit</strong></li>
+                        <li><strong>View</strong></li>
+                    </ul>
+
+                    <p>You can also edit current Topics by hovering over the topic list on the right.</p>
+
+                    <ul>
+                        <li><strong>Edit </strong>– Allows you to edit the Topic properties such as Name, Slug, Parent and Description</li>
+                        <li><strong>Quick </strong> Edit – Allows you to quickly edit the Topic Name and Slug</li>
+                        <li><strong>Delete</strong>  – Deletes the Topic permanently from the list of Topic. Deleting a Topic does not delete the posts in that Category </li>
+                        <li><strong>View </strong>   – This will list all the posts that are currently using this Topic.</li>
+                    </ul>
+
+
+
+
+
+                    <h2 id="tax-rules">Specific Rules For Content Areas</h2>
+                    <h2>Action</h2>
+                    <p><em>Coming Soon</em></p>
+
+                    <h2>Quality</h2>
+                    <p><em>Coming Soon</em></p>
+
+                    <h2>Institute</h2>
+                    <p><em>Coming Soon</em></p>
+
+                    <h2>Education</h2>
+                    <p><em>Coming Soon</em></p>
+
+                    <h2>Announcements</h2>
+                    <p><em>Coming Soon</em></p>
+
+                    <h2>Webinars</h2>
+                    <p><em>Coming Soon</em></p>
+
+                </div>
+
+      
+                <!-- Creating and Editing Pages
+  ================================================== -->
+
+                <div class="bs-docs-section">
+                    <div class="page-header">
+                        <h1 id="pages">Creating and Editing Pages</h1>
+                    </div>
+                         
+                    <h2 id="pages-overview">Overview</h2>
+                     <p>Pages are very similar to posts;  pages differ in that they contain information that is by and large static. For example, “about” and “General information” pages and not dynamically fed into specific section of the website. Pages also are displayed differently than posts and can have specific templates. Anything that is in the “General” content stream will be managed under the “Pages” section.</p>
+
+
+                    <h2 id="pages-new">Adding new Pages</h2>
+                    <p>Create and editing pages is essentially the same process as creating a post, with a few different input fields. If you need help with the editor and advanced options, read the section [Adding and Editing Content] for more information. The process to save and publish [link to publish section] pages is also the same for posts.</p>
+
+
+                    <h2 id="pages-templates">Page Templates and Attributes</h2>
+                    <p>An import thing to understand about pages is that they can have different page templates. The page template determines what content goes on a page and how the content is displayed on the live website.   Specific page templates are covered in detail in the next section.</p>
+
+                    <p>To change the page template of the page that you are editing, edit the dropdown under the “Page Attributes” input section on the right sidebar. There are also other attributes that can be changed that are specific to pages.</p>
+ 
+                    <p><strong>Page Parent</strong> - This allows you to set a parent page that introduces a hierarchy. This is helpful for page organization within the CMS, however it does not affect how the page menus are displayed on the  website. To edit the website menus and navigational structure, refer to the “Editing Menus” section [link here].</p>
+
+                    <p><strong>Page Template</strong> - This is where you can change the template that the page uses. A list of page templates that can be used are listed below. </p>
+
+                    <p><strong>Page Order</strong> - This should always be left at 0.</p>
+
+                </div>
+
+
+                <!-- Editing Specific Page Templates
+  ================================================== -->
+
+                <div class="bs-docs-section">
+                    <div class="page-header">
+                        <h1 id="temp">Editing Specific Page Templates</h1>
+                    </div>
+                    
+                    <h2 id="temp-default">Default</h2>
+                    <p>The screenshot below shows how the content of a default page is displayed.</p>
+
+                    <p>[screenshot here]</p>
+
+                    <p>You will notice in the page editing view there are multiple input fields for specific sections. The main editor controls the content that is displayed in the first main column of the template. Below the main editor are more fields:</p>
+                    
+                    <ul>
+                        <li><strong>Second Column:</strong> Content in this field is displayed in the middle column of the template.</li>
+                        <li><strong>Third Column:</strong> Content in this field is displayed in the middle column of the template.</li>
+                        <li><strong>Featured Image:</strong> The featured image that is associated with the default template will be displayed as the main banner image. This image should be 230px tall and at least 1200px wide.</li>
+                        <li><strong>Banner Title:</strong> This is the title text that is overlayed on the banner image.</li>
+                    </ul>
+ 
+
+
+
+
+                    <h2 id="temp-home">Homepage</h2>
+                    <p>The homepage has a special page template that has a specific area that can be edited. The main areas of the homepage (the Face Images and article feeds) are dynamically generated by most recents posts or posts that are pinned to the homepage. The sections on the page that can be manually edited are:</p>
+
+                    <ul>
+                        <li><strong>Brand Text:</strong> Text that is displayed under the logo.</li>
+                        <li><strong>Bottom Left:</strong>Content that is displayed below the dynamic news feed, in the first column</li>
+                        <li><strong>Bottom Middle:</strong>Content that is displayed below the dynamic news feed, in the middle column</li>
+                        <li><strong>Bottom Right:</strong>Content that is displayed below the dynamic news feed, in the third column.</li>
+                    </ul>
+                    <h2 id="temp-landing">Landing Pages</h2>
+                    <p>There are multiple landing page templates that are used throughout the site, such as Action, Quality, Education, Institute, Webinars and VirtualEd. The main content of these pages is dynamically generated by posts that are fed in, however, the banner image and banner title text can be changed. On these pages, the main editor should be blank and you can edit the Featured Image and Banner Title fields.</p>
+
+
+                    <h2 id="temp-branded">Branded Content Areas</h2>
+                    <p><em>Coming Soon...</em></p>
+
+                    
+                </div>
+
+
+                <!-- Adding Announcements
+  ================================================== -->
+
+                <div class="bs-docs-section">
+                    <div class="page-header">
+                        <h1 id="announce">Adding Announcements</h1>
+                    </div>
+                    
+                    <h2 id="announce-overvire">Overview</h2>
+                    <p>Announcements can be added throughout the website to highlight upcoming events, important dates, deadlines or anything else that needs to be communicated to users. Announcements display on landing pages and are styled differently so they stand out to users. [screenshot?]</p>
+
+
+                    <h2 id="announce-create">Creating Announcements</h2>
+                    <p>To create an announcement, click “Add New” under the Announcements menu item. There are three content fields that need to be completed for an announcement:</p>
+                    <ul>
+                        <li><strong>Heading: </strong>This is the main, bold text that displays the announcement.</li>
+                        <li><strong>Link Label: </strong>This is the text that is displayed under the heading that links to a destination page or post. For example, “Read More” or “Sign up now”</li>
+                        <li><strong>Link Destination: </strong>This is the URL of the page that lists more information about the announcement. </li>
+                    </ul>
+                    <div class="bs-callout bs-callout-danger">
+                        <h4>NOTE:</h4>
+                        <p> When populating a field that requires a link URL, make sure to include “http://” in the URL!</p>
+                    </div>
+                    <p>
+                        Each announcement must also have at least one location selected under the Announcements category, as well. This controls where the announcement is displayed. For example, if you would like the announcement to be displayed on the Action landing page, select the “Action” category.
+                    </p>
+
+                </div>
+
+
+                <!-- Editing Page Menus
+  ================================================== -->
+
+                <div class="bs-docs-section">
+                    <div class="page-header">
+                        <h1 id="menus">Editing Page Menus</h1>
+                    </div>
+                    
+                    <h2 id="menus-overview">Overview</h2>
+                    <p>To edit any navigation menu that is displayed on the website, including the utilities navigation, footer navigation, secondary and tertiary page menus, go the the “Menus” section located under the “Appearance Menu Item”. Here you can edit the menu in a drag and drop style.</p>
+
+                    <p>At the top of the Edit Menus page, a dropdown list displays at the top of the page that enables you to select the menu that you would like to edit. Simply select the menu you would like to edit from the Select a menu to edit dropdown list and then click the Select button. The menu items for your selected menu will then be displayed. </p>
+
+                    <p>Your current list of menu items for the selected menu resides in the right hand column on the menu screen. The items in this right-hand column on the Menus page will match the menu items that appear on your website. To change the order of the menu items, simply click and drag an item to the desired location. Menu items can also have sub-items. To assign a menu item as a sub-item, simply drag the item below the parent item and move it to the right so that it is indented. Sections of the website, such as the Institute, that have tertiary menus will use menu sub-items to display the third-level menus. </p>
+
+                    <p>Clicking on the down arrow next to each menu item name will show an options panel for that particular menu item. In this options panel, there are several items that can be updated/changed. You can show or hide extra fields such as Link Target, CSS Classes, or Description using the Screen Options tab at the very top-right of the screen.</p>
+
+                    <ul>
+                        <li>
+                            <Strong>Navigation Label:</Strong> This is the label that will display within the actual menu on your website
+                        </li>
+                        <li>
+                            <Strong>Title Attribute:</Strong> This is the tooltip that appears when the mouse cursor hovers over the menu item
+                        </li>
+                        <li>
+                            <Strong>URL: </Strong> Used within Custom Links and will contain the URL to navigate to when that menu item is clicked
+                        </li>
+                        <li>
+                            <Strong>CSS Class: </Strong>Optional CSS Classes to add to this menu item - this should always be blank.
+                        </li>
+                        <li>
+                            <Strong>Description: </Strong>The description for the link is optional. 
+                        </li>
+                    </ul>
+                    <p>After making updates to your menu items, click the Save Menu button at the top or bottom of the screen.</p>
+
+                    <h2 id="menus-new">Adding a New Menu Item</h2>
+                    <p>To add a new page as a menu item, tick the checkboxes in the Pages panel, in the left column, next to each of the pages that you’d like to add. You can select one page at a time or multiple. After selecting your pages, click the “Add to Menu” button. The new menu items will append to the bottom of the current list of menu items. </p>
+
+                    <p>The menu item name will default to the page name. To change this, simply click on the down arrow next to the menu item name to view the options panel and then update the Navigation Label to your preferred name. After making your updates, click the “Save Menu” button at the top or bottom of the screen. The steps to add a post from a specific section or an archive page as a menu item are exactly the same as adding a page.</p>
+                    
+
+
+                    <h2 id="menus-custom">Adding a Custom Link Menu Item</h2>
+                    <p>Use the Custom Links panel to add a custom link to your menu, such as a link to an external website. Simply type in the website URL in the URL field and the menu name in the Link Text field. Click the Add to Menu button when done. Use the same steps outlined above to adjust the order of the menu item and click the Save Menu button at the top or bottom of the screen to save your changes.</p>
+
+
+                    <h2 id="menus-delete">Deleting a Menu Item</h2>
+                    <p>To delete a menu item click on the down arrow next to the menu item name to view the options panel for that item and then click the “Remove” link. After making your updates, click the “Save Menu” button at the top or bottom of the screen.</p>
+
+                </div>
+
+
+
+                <!-- Moderating Comments
+  ================================================== -->
+
+                <div class="bs-docs-section">
+                    <div class="page-header">
+                        <h1 id="comments">Moderating Comments</h1>
+                    </div>
+                    <p>When a user posts a comment, they will be able to see their own comment and a line telling them that their comment is awaiting moderation (if a user is a verified hospital member, the comment will be directly posted). Super Admin’s will receive an email advising that a comment is waiting to be approved (this email can be turned off) and you can click directly on a link within the email in order to approve the comment. </p>
+
+                    <p>Once signed in, you will be asked for confirmation – click yes and the comment will now be visible to all site visitors. You can also carry out bulk moderation by going to the “Comments” link. If you have comments to moderate, the tab will show the number of comments waiting. Click it and you'll see a list of comments awaiting moderation in the queue. </p>
+                     
+                    <p>Here, you'll have a set of options for each comment ('Approve', ‘Reply’, ‘Quick Edit’, ‘Edit’, ‘Spam’ and 'Trash'), which you can also access by placing the mouse pointer over each comment. You can also edit comments to remove unsuitable words or information, and you can delete individual comments. </p>
+
+                    <p>If an inappropriate comment has been submitted, you may wish to Unapprove it. This will stop the comment from displaying on your site. Unapproved comments will displayed with a yellow background within your list of comments. Hovering your cursor over the comment will display an “Approve” link instead of an “Unapprove” link.</p>
+
+                    <p>If a spam comment has been posted to your site you can mark it as “Spam “simply by hovering your cursor over the comment and clicking the “Spam” link. Once a user has been marked as spam, any comments made by the same user will go directly to the spam folder.</p>
+
+                    <p>If you simply want to remove a comment, hover your cursor over it and click the Trash link. To empty the Trash, click on the Trash link at the top of the page to display all the comments that have been marked as Trash. This link will be displayed along with a number within brackets, which indicates how many comments are marked as Trash. To permanently remove all these comments, click the Empty Trash button. You will not be prompted for confirmation.</p>
+
+                    <p>To remove all the comments marked as spam, click on the “Spam” link at the top of the page to display all the comments that in the folder This link will be displayed along with a number in brackets, which indicates how many spam comments tare there. To permanently remove all these comments, click the “Empty Spam” button. You will not be prompted for confirmation.</p>
+
+                    <p>You can also delete a single spam comment permanently by clicking on the “Delete Permanently” link that appears when hovering your cursor over each row. You will not be prompted for confirmation.</p>
+ 
+                </div>
+
+
+
+                <!-- Managing Discussions
+  ================================================== -->
+
+                <div class="bs-docs-section">
+                    <div class="page-header">
+                        <h1 id="disc">Managing Discussions</h1>
+                    </div>
+
+                    <h2 id="disc-overview">Overview</h2>
+                    <p>All discussions, including public, hospital members only, and private discussions, on the website are listed under the “Discussions” menu item. Similar to a posts page, the discussion page lists all discussions. If the discussion listed has “- Pending” beside the title in the listing, then it is awaiting approval by a discussion moderator. All other discussions listed are open and active. </p>
+
+                    
+                    <h2 id="disc-mod">Approving and Editing Discussions</h2>
+                    <p>To view and edit a discussion, click on the title to edit. Discussions all contain a Title, Description, Tags, and Discussion Category. 
+                        <strong>Discussion Tags</strong> are created by the user that created the discussion and can be changed the same way post tags are changed. 
+                        <strongDiscussion Categories </strong>are listed below the tags and can be managed in the same way that post topics are. The Discussion Category determines where the discussion lives on the site. When a user creates a discussion, a category is automatically assigned to the discussion. The following categories are available:</p>
+
+                    <ul>
+                        <li><strong>Public: </strong>This means that the discussion is open to ANY user logged into the Member Network (not just members of the association, but members of the website).</li>
+                        <li><strong>Private: </strong>Private discussions are hidden from the general public and only visible to hospital memeber users logged into the Member Network.</li>
+                        <li><strong>Group: </strong>If a discussion is assigned to the group category, it means that is a discussion that lives within a Private Group/Program page. All discussions in the group category MUST have a sub category that determines the specific group that it is associated with (e.g. Fellows).</li>
+                    </ul>
+
+                    <p>Once the discussion has been reviewed, you can approve it by simply changing the Publish status from “Pending” to “Published.” If you would not like to approve the post, simple click the “Move to Trash” link to discard the discussion.</p>
+
+ 
+                </div>
+
+
+                <!-- Managing Users
+  ================================================== -->
+
+                <div class="bs-docs-section">
+                    <div class="page-header">
+                        <h1 id="users">Managing Users</h1>
+                    </div>
+
+                    <h2 id="users-overview">Overview</h2>
+                    <p>Only “Super Admins” have the access to manage users. To view a list of website users, click on the “Users” menu item.</p>
+
+                    <p>This screen lists all the existing users for your site, including both CMS users and Member Network users. At the top of the screen, there are links that allow you to filter the list of users based on the User Roles.</p>
+
+                    <h2 id="users-roles">User Roles</h2>
+                    <h3>Super Admin</h3>
+                    <ul>
+                        <li>Only user group that has the ability to publish content live</li>
+                        <li>Only user group that has the ability to create new users</li>
+                        <li>Has full admin access
+                            <ul>
+                                <li>Can edit, remove, publish any article</li>
+                                <li>Can override any other users settings</li>
+                                <li>Can edit/remove any comments/discussions</li>
+                            </ul>
+                        </li>
+                        <li>Has the ability to edit live pages, then replace the live page with the new edits</li>
+                        <li>Can post on behalf of any other user (i.e. change the author of any post/article)</li>
+                        <li>Manages all taxonomy elements </li>
+                        <li>Moderates all functions related to Member Network (discussions, private groups, etc.)</li>
+                    </ul>
+ 
+                    <h3>VP</h3>
+                    <ul>
+                        <li>Can create and edit their own content</li>
+                        <li>Can only promote posts to "Pending Publication" status- content must be approved/published by a Super Admin</li>
+                        <li>No access to publish articles live or create new users</li>
+                        <li>Can upload files and resources</li>
+                        <li>Can unpublish comments/discussion posts, but cannot delete them</li>
+                        <li>Can moderate  Private Group/Program Group Pages</li>
+                        <li>Cannot manage Taxonomy elements</li> 
+                        <li>Can be limited on which sections of the site they have access/rights to (Action, Quality, Institute, Groups, etc.)</li>
+                    </ul>    
+
+
+                    <h3>AVP</h3>
+                    <ul>
+                        <li>Can create and edit their own content</li>
+                        <li>Can promote posts to "Pending Review" status OR Pending Publication (bypassing AVP)- content must be approved by AVP and/or published by a Super Admin </li>
+                        <li>No access to publish articles live or create new users</li>
+                        <li>Can upload files and resources</li>
+                        <li>Can unpublish comments/discussion posts, but cannot delete them</li>
+                        <li>Can moderate  Private Group/Program Group Pages</li>
+                        <li>Cannot manage Taxonomy elements</li> 
+                        <li>Can be limited on which sections of the site they have access/rights to (Action, Quality, Institute, Groups, etc.)</li>
+                    </ul> 
+
+                    <h3>Content Creator</h3>
+                    <ul>
+                        <li>Can create and edit their own content</li>
+                        <li>Can promote posts to "Pending Review" - content must be approved by AVP and/or VP </li>
+                        <li>No access to publish articles live or create new users</li>
+                        <li>Can upload files and resources</li>
+                        <li>Can unpublish comments/discussion posts, but cannot delete them</li>
+                        <li>Can moderate  Private Group/Program Group Pages</li>
+                        <li>Cannot manage Taxonomy elements</li> 
+                        <li>Can be limited on which sections of the site they have access/rights to (Action, Quality, Institute, Groups, etc.)</li>
+                    </ul> 
+
+                    <h3>Members</h3>
+                    <ul>
+                        <li>Users that have a Member Network account</li>
+                        <li>Have no access to the CMS admin area.</li>
+                        <li>*Members can be selected as "Blog Authors" and will have the ability to submit a blog post via the Member Network</li>
+                    </ul>
+
+
+
+                    <h2 id="users-add">Adding users </h2>
+                    <p>Simply select Add New from the Users menu and then fill in the user’s details, making sure you chose the correct user level. You’ll also need to set a password here. Once completed and email will be sent to the created user to notify them of their new account.</p>
+                     <div class="bs-callout bs-callout-danger">
+                        <h4>NOTE:</h4>
+                        <p> MORE INFO TO COME HERE ON ASIGNNING USER ROLES AND PRIVILEGES</p>
+                    </div>
+
+
+                    <h2 id="users-remove">Removing users</h2>
+                    <p>To remove a user, simply hover over the user and select ‘Delete’. You will then be asked for confirmation, as well as a request as to whether to delete all the posts authored by the user, or to transfer the users’ posts and links to another user. Be careful! If you delete all posts, all the content by that author will be removed from your website. It's usually better, unless that user was filling your site with nonsense, to attribute their posts to another user: Once you're satisfied with the selection, press the Confirm Deletion button. </p>
+
+
+                    <h2 id="users-edit">Editing User Profile Information</h2>
+                    <p>You may wish to change details and settings relating to a user. When you hover over a user’s details, you’ll see the ‘edit’ link appear. Click Edit and you should then see the Edit User screen. From here, you can see and edit the user details. </p>
+                    pFrom this page, you can set various options that are generally self-explanatory, including changing the users role, and changing a user’s Member Type for the Member Network.</p>
+
+                </div>
+
+
+
+                <!-- Publishing Process
+  ================================================== -->
+
+                <div class="bs-docs-section">
+                    <div class="page-header">
+                        <h1 id="publish">Publishing Process</h1>
+                        <div class="bs-callout bs-callout-danger">
+                        <h4>NOTE:</h4>
+                        <p> MORE INFO TO COME HERE ON REVIEW PROCESS STEPS</p>
+                    </div>
+                    </div>
+ 
+                </div>
+
+            </div> <!-- Col 9 -->
+        </div> <!-- Row -->
+    </div> <!--Container -->    
+
+
+
+    <!-- Footer
+    ================================================== -->
+
+    <footer class="bs-footer">
+        <div class="container">
+             
+
+            <ul class="footer-links">
+                <li>
+                    
+                </li>
+
+                <li class="muted">·</li>
+
+                <li>
+                    
+                </li>
+
+                <li class="muted">·</li>
+
+                <li 
+                </li>
+
+                <li class="muted">·</li>
+
+                <li>
+                    
+                </li>
+            </ul>
+        </div>
+    </footer><!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.js"></script> <script src="dist/js/bootstrap.js"></script> <script src="../platform.twitter.com/widgets.js"></script> <script src="assets/js/holder.js"></script> <script src="assets/js/application.js"></script><!-- Mirrored from getbootstrap.com/ by HTTrack Website Copier/3.x [XR&CO'2013], Wed, 02 Oct 2013 12:11:26 GMT -->
+</body>
+</html>

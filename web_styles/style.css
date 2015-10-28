@@ -1,0 +1,135 @@
+/*
+Theme Name: Essential Hospitals
+Description: CMS theme for America's Essential Hospitals. Crafted, with love, by MESH
+Version: 1.0
+Author: MESH Design and Development
+Author URI: http://www.meshfresh.com
+*/
+
+
+@import url(css/reset.css);
+@import url(css/aeh.css);
+@import url(css/membernetwork.css);
+@import url(css/responsive.css);
+@media only print{
+
+}
+
+#contentPrimary h1:first-child{margin-top: 20px;}
+.single #contentPrimary .gutter{padding: 20px 20px 30px 20px}
+
+h4{color: #F05133; line-height: 18px;}
+h5{font-weight: bold;}
+
+#colors .color-block{float: left; margin: 10px 10px 80px 10px; width:80px; height: 80px; padding: 20px; color: #fff; text-transform: uppercase;}
+#colors .bgred{background-color: #f05135;}
+#colors .bggreen{background-color: #28bdb3}
+#colors .bgblue{background-color: #0397d6}
+#colors .bggray{background-color: #525252}
+#colors span.title{color: #5a5a5a; position: relative; top: 100px; text-transform: none;}
+
+form{	background: #F0F0F0;padding: 18px 18px 45px;}
+
+.button{border-radius: 3px; border: medium none; color: #FFF;
+padding: 10px 10px; text-transform: uppercase;align-items: flex-start;
+text-align: center;cursor: default;box-sizing: border-box; float: left;}
+
+th {font-weight: bold;}
+
+#icons img{ padding-right: 20px; }
+#icons h3, #buttons h3 {padding-top: 20px;}
+
+#loginForm {float: left; padding-bottom: 20px;}
+#loginForm input[type="submit"] {
+ 
+margin: 0 3px 0 0;
+width: 220px;
+color: #FFF;
+margin: 0 auto;
+font-weight: bold;
+font-size: 11px;
+background: #2E2E2E;
+ 
+border-top: none;
+text-transform: uppercase;
+border-radius: 3px;
+ 
+margin: 0 auto;
+float:  left;
+display: block;
+padding: 10px;
+}
+
+span.reserve {float: left; margin-left: 0; margin: 10px 0px 0px 0px; position: relative; left:-10px; }
+
+#buttons span.reserve{margin-right: -4px;}
+
+p.policy .button{background-color: #f05135}
+
+.fugghedabatit {float: right;
+color: #F05135;
+text-align: center;
+border: 1px solid #F05135;
+border-radius: 3px;
+padding: 5px 10px;
+margin: 10px 10px 0px 10px;
+display: block;
+width: 100px;
+transition: 0.2s all;
+-webkit-transition: 0.2s all;
+-moz-transition: 0.2s all;
+-ms-transition: 0.2s all;
+-o-transition: 0.2s all;
+position: relative;
+top: -15px;
+
+}
+
+.fugghedabatit:hover{color:#fff;border:1px solid #F05135;background:#f05135;cursor:pointer;}
+
+
+.arrows input[type="submit"] {
+background: url("http://2c4xez132caw2w3cpr1il98fssf.wpengine.netdna-cdn.com/wp-content/themes/EssentialHospitals/images/newsletter_btn.png") no-repeat 0 0 #F05135 !important;
+border: 0 none !important;
+float: left !important;
+height: 24px !important;
+margin-top: 8px !important;
+text-indent: -5000px !important;
+width: 24px !important;
+border-radius: 3px !important;
+}
+
+
+.nav-btn img {margin: 10px 0px 10px 0px ;}
+.nav-btn img.fright{margin-left: 200px;  }
+.nav-btn img:hover{cursor: pointer; opacity: 0.7}
+
+
+ .center .gutter {
+padding: 20px 16% 0px 8.4%;
+}
+ 
+#instituteCenters:after{margin-bottom: 20px;} 
+
+#instituteCenters.num3 .center { width: 32.4%; margin-right: 1.4%; }
+
+#instituteCenters.num3 .center:last-child{ margin-right: 0; }
+
+#featured-img.quality{border-color: #28BDB3}
+#featured-img.education{border-color: #5a5a5a}
+#featured-img.quality{border-color: #28BDB3}
+
+#loginForm .pass-reg {
+float: left;
+width: 100%;
+text-align: left;
+font-size: 11px;
+position: relative;
+left: 0px;
+top: 8px;
+margin-bottom: 20px;
+}
+
+#loginForm .pass-reg a{
+color: #5a5a5a
+}

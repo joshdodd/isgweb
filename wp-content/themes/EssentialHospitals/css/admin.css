@@ -1,0 +1,37 @@
+/* ----- At a Glance ----- */
+.page-count.policy-count a:before {content: '' !important;background: url(../images/policy-menu.png) center center no-repeat;display: block;height: 20px;width: 20px;}
+.page-count.quality-count a:before {content: '' !important;background: url(../images/quality-menu.png) center center no-repeat;display: block;height: 20px;width: 20px;}
+.page-count.institute-count a:before {content: '' !important;background: url(../images/institute-menu.png) center center no-repeat;display: block;height: 20px;width: 20px;}
+.page-count.webinar-count a:before {content: '' !important;background: url(../images/education-menu.png) center center no-repeat;display: block;height: 20px;width: 20px;}
+.page-count.story-count a:before {content:'\f337' !important;}
+.page-count.group-count a:before {content:'\f307' !important;}
+.page-count.discussion-count a:before {content:'\f125' !important;}
+.page-count.general-count a:before {content:'\f116' !important;}
+
+
+/* ----- Sidebar ----- */
+#adminmenu li#menu-posts-group div.wp-menu-image:before{content:'\f307';}
+#adminmenu li#menu-posts-discussion div.wp-menu-image:before{content:'\f125';}
+#adminmenu li#menu-posts-story div.wp-menu-image:before{content:'\f337';}
+#adminmenu li#menu-posts-alert div.wp-menu-image:before{}
+#adminmenu li#menu-posts-general div.wp-menu-image:before{content:'\f116';}
+
+/* ----- Add Users to Posttype ----- */
+#autp_autofillme{position:relative;float:left;}
+	#autp_autofillme input[type='text']{position:relative;z-index:1;}
+	#userloader{position: absolute;z-index: 2;top: 4px;right: 4px;background: url(../images/loader-gif.gif) no-repeat;background-size: contain;display: block;height: 20px;width: 20px;transition: 0.2s all;-webkit-transition: 0.2s all;-moz-transition: 0.2s all;-ms-transition: 0.2s all;-o-transition: 0.2s all;opacity:0;}
+		#userloader.active{opacity:1;}
+
+
+/* ----- Media Library ----- */
+table.media .row-actions .view{display:none;}
+
+/* ----- iMIS Company ----- */
+.hiddenVal ,#hiddenVals{display:none;}
+
+/* ----- Profile Fields ----- */
+/*label[for='user_login'],input#user_login,td > span.description{display:none;}*/
+
+#post_tag-add-toggle{display: none !important;}
+
+#post_tag-4167,#post_tag-2818,#post_tag-260,#post_tag-197,#post_tag-8585,#post_tag-3206,#post_tag-5527,#post_tag-342,#post_tag-4163,#post_tag-5813,#post_tag-5969,#post_tag-253,#post_tag-252,#post_tag-300,#post_tag-85,#post_tag-352,#post_tag-304,#post_tag-215,#post_tag-396,#post_tag-417,#post_tag-5563,#post_tag-5560,#post_tag-220,#post_tag-353,#post_tag-168,#post_tag-6738,#post_tag-418,#post_tag-6434,#post_tag-6561,#post_tag-175,#post_tag-170,#post_tag-219,#post_tag-447,#post_tag-6664,#post_tag-445,#post_tag-6813,#post_tag-410,#post_tag-167,#post_tag-6039,#post_tag-6665,#post_tag-313,#post_tag-412,#post_tag-397,#post_tag-6030,#post_tag-202,#post_tag-355,#post_tag-426,#post_tag-5544,#post_tag-303,#post_tag-212,#post_tag-280,#post_tag-413,#post_tag-4718,#post_tag-5376,#post_tag-254,#post_tag-382,#post_tag-2749,#post_tag-337,#post_tag-482,#post_tag-357,#post_tag-177,#post_tag-401,#post_tag-5971,#post_tag-431,#post_tag-5204,#post_tag-415,#post_tag-334,#post_tag-360,#post_tag-5769,#post_tag-214,#post_tag-210,#post_tag-2817,#post_tag-6072,#post_tag-155,#post_tag-6421,#post_tag-188,#post_tag-240,#post_tag-234,#post_tag-380,#post_tag-327,#post_tag-404,#post_tag-6750,#post_tag-370,#post_tag-184,#post_tag-5558,#post_tag-6430,#post_tag-7995,#post_tag-3207,#post_tag-408,#post_tag-286,#post_tag-3205,#post_tag-277,#post_tag-384,#post_tag-275,#post_tag-5551,#post_tag-299,#post_tag-291,#post_tag-262,#post_tag-301,#post_tag-5205,#post_tag-296,#post_tag-5758,#post_tag-402,#post_tag-6663,#post_tag-349,#post_tag-5822,#post_tag-6431,#post_tag-480,#post_tag-281,#post_tag-377,#post_tag-328,#post_tag-172,#post_tag-452,#post_tag-209,#post_tag-375,#post_tag-183,#post_tag-386,#post_tag-7997,#post_tag-284,#post_tag-201,#post_tag-308,#post_tag-332,#post_tag-206,#post_tag-479,#post_tag-5520,#post_tag-5382,#post_tag-6077,#post_tag-5183,#post_tag-371,#post_tag-7996,#post_tag-368,#post_tag-1465,#post_tag-5661,#post_tag-4165,#post_tag-4921,#post_tag-5213,#post_tag-263,#post_tag-5925,#post_tag-5770,#post_tag-369,#post_tag-5211,#post_tag-333,#post_tag-5928,#post_tag-6433,#post_tag-329,#post_tag-7118,#post_tag-4922,#post_tag-8586,#post_tag-185,#post_tag-5370,#post_tag-376,#post_tag-7990{display: none;}

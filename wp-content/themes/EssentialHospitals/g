@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-16"?>
+	<iBridge xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		<User 
+			ID="10683" 
+			TOKEN="1923323A-48C0-4ABE-B059-E6E020479112" 
+			USER_COOKIE="" 
+			FIRST_NAME="Mark" 
+			MIDDLE_NAME="S." 
+			LAST_NAME="Campbell" 
+			SUFFIX="" DESIGNATION="" 
+			PREFIX="Mr." 
+			COMPANY="America's Essential Hospitals" 
+			CO_ID="9135" 
+			MEMBER_TYPE="NAPHS" 
+			MEMBER_TYPE_DESCRIPTION="AEH Staff (STAFF)" 
+			EMAIL="mcampbell@essentialhospitals.org" 
+			WEB_LOGIN="mcampbell@essentialhospitals.org" 
+			WEB_PASSWORD="aeh1301a" 
+			WEB_EXPIRATION_DATE="2099-09-01T14:40:51" 
+			LAST_LOGIN_DATE="2014-08-20T11:25:47" 
+			POSITION="" 
+			AD_HOC="" 
+			WEB_INTERESTS="AMB-F,CCC-F,COM-F" 
+			FELLOWS_PROGRAM="" 
+			HQ_ID="9135" 
+			SYSTEMNAME="America's Essential Hospitals" 
+			INFORMAL="Mark" 
+			TITLE="Director of IT" 
+			CITY="Washington"
+			STATE_PROVINCE="DC" 
+			ZIP="20004-1712" 
+			WORK_PHONE="(202) 585-0553" 
+			FAX="(202) 585-0101" 
+			COMPANY_SORT="AMERICA'S ESSENTIAL HOSPITALS" 
+			WEBSITE="www.essentialhospitals.org"> <Activity />
+		</User>
+
+	</iBridge>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lectoratest>
+<survey>0</survey>
+<grade>0</grade>
+<showresults>0</showresults>
+<scoreonly>0</scoreonly>
+<get>0</get>
+<incvar>0</incvar>
+<promptsuccess>0</promptsuccess>
+<persist>0</persist>
+<name>Knowledge Check Questions</name>
+<subject>Ask Every Patient REAL: Test Results</subject>
+<testtime>0</testtime>
+<numrandom>0</numrandom>
+<passinggrade>75</passinggrade>
+<cancelfail>a001_certification_page_37_completion_certificate.html</cancelfail>
+<passdone>a001_certification_page_37_completion_certificate.html</passdone>
+<prevpage>a001_page_26_knowledge_check.html</prevpage>
+<gdocs>0</gdocs>
+<page>
+<index>0</index>
+<name>a001_knowledge_check_questions_page_27_knowledge_check_question_1_asking_race.html</name>
+<question>
+<id>12017</id>
+<type>2</type>
+<weight>1</weight>
+<name>Question 3</name>
+<var>VarQuestion_0003</var>
+<text>Choose the best response; then, click the “Submit” button.</text>
+<correctans>We use this information to help us provide better patient care and services. </correctans>
+<choices>I just need to get your choice. Should I repeat them?|I’m not sure of the reason. Would you prefer not to tell me?|We use this information to help us provide better patient care and services. </choices>
+<allowmult>0</allowmult>
+<persist>0</persist>
+<gradeindividual>0</gradeindividual>
+<surveyquestion>0</surveyquestion>
+<anyanswer>0</anyanswer>
+<casesensitive>0</casesensitive>
+<separator>|</separator>
+<relationship>0</relationship>
+</question>
+</page>
+<page>
+<index>1</index>
+<name>a001_knowledge_check_questions_page_28_knowledge_check_question_2_methods_of_collecting_real_data.html</name>
+<question>
+<id>12088</id>
+<type>14</type>
+<weight>1</weight>
+<name>Question 4</name>
+<var>VarQuestion_0004</var>
+<text>Click the two correct responses, then, click the “Submit” button.</text>
+<correctans>Asking patients to self-report their choices for language preference, ethnicity, and race,Providing patients with a form that allows them to write in their REAL choices and assisting them to complete it</correctans>
+<choices>Asking patients to self-report their choices for language preference, ethnicity, and race|Looking at the patient and checking “Unknown” if you are unsure of their REAL data|Providing patients with a form that allows them to write in their REAL choices and assisting them to complete it</choices>
+<allowmult>1</allowmult>
+<persist>0</persist>
+<gradeindividual>0</gradeindividual>
+<surveyquestion>0</surveyquestion>
+<anyanswer>0</anyanswer>
+<casesensitive>0</casesensitive>
+<separator>|</separator>
+<relationship>0</relationship>
+</question>
+</page>
+<page>
+<index>2</index>
+<name>a001_knowledge_check_questions_page_29_knowledge_check_question_3_handling_challenging_responses.html</name>
+<question>
+<id>12131</id>
+<type>2</type>
+<weight>1</weight>
+<name>Question 5</name>
+<var>VarQuestion_0005</var>
+<text>If your patient seems upset, you may receive unusual answers to your REAL questions. Select the best response from the options below, then click the “Submit” button.</text>
+<correctans>If you would not like to answer, that is fine.</correctans>
+<choices>If you would not like to answer, that is fine.|Well, it is my business. We need to make sure you receive the best care possible.|I’ll just code this as, “Declined.” Let’s move on.</choices>
+<allowmult>0</allowmult>
+<persist>0</persist>
+<gradeindividual>0</gradeindividual>
+<surveyquestion>0</surveyquestion>
+<anyanswer>0</anyanswer>
+<casesensitive>0</casesensitive>
+<separator>|</separator>
+<relationship>0</relationship>
+</question>
+</page>
+<page>
+<index>3</index>
+<name>a001_knowledge_check_questions_page_30_knowledge_check_question_4_asking_language_preference.html</name>
+<question>
+<id>12170</id>
+<type>2</type>
+<weight>1</weight>
+<name>Question 6</name>
+<var>VarQuestion_0006</var>
+<text>Click the best answer; then, click the “Submit” button.</text>
+<correctans>You will enable your organization’s health care providers to understand what language is best used to discuss the patient’s health care</correctans>
+<choices>Our health care organization prefers to use English at all times|You will enable your organization’s health care providers to understand what language is best used to discuss the patient’s health care|It is not important. Instead of asking the patient, it is better to assume the language he or she prefers based upon the language he or she is using to talk to family and others.</choices>
+<allowmult>0</allowmult>
+<persist>0</persist>
+<gradeindividual>0</gradeindividual>
+<surveyquestion>0</surveyquestion>
+<anyanswer>0</anyanswer>
+<casesensitive>0</casesensitive>
+<separator>|</separator>
+<relationship>0</relationship>
+</question>
+</page>
+<page>
+<index>4</index>
+<name>a001_knowledge_check_questions_page_31_knowledge_check_question_5_using_sight_alone.html</name>
+<question>
+<id>12207</id>
+<type>2</type>
+<weight>1</weight>
+<name>Question 7</name>
+<var>VarQuestion_0007</var>
+<text>Select the best choice; then, click the “Submit” button. </text>
+<correctans>Never.  Making guesses does not give the patient his or her right to choose the appropriate REAL categories.</correctans>
+<choices>When REAL data is obvious and entering the data based on your assumptions is easier.|When it helps the patient get through registration quickly.|Never.  Making guesses does not give the patient his or her right to choose the appropriate REAL categories.</choices>
+<allowmult>0</allowmult>
+<persist>0</persist>
+<gradeindividual>0</gradeindividual>
+<surveyquestion>0</surveyquestion>
+<anyanswer>0</anyanswer>
+<casesensitive>0</casesensitive>
+<separator>|</separator>
+<relationship>0</relationship>
+</question>
+</page>
+<page>
+<index>5</index>
+<name>a001_knowledge_check_questions_page_32_knowledge_check_question_6_more_specific_or_granular_categories.html</name>
+<question>
+<id>12251</id>
+<type>2</type>
+<weight>1</weight>
+<name>Question 8</name>
+<var>VarQuestion_0008</var>
+<text>Choose the best response; then, click the “Submit” button.</text>
+<correctans>Use the “Specific or Granular Categories” job aid to determine which of the five race categories to use.</correctans>
+<choices>Say, “Sir, I really need you to decide on one of these five categories.”|Use the “Specific or Granular Categories” job aid to determine which of the five race categories to use.|Say, “I’ll just check, ‘Declined.’ Thanks.”</choices>
+<allowmult>0</allowmult>
+<persist>0</persist>
+<gradeindividual>0</gradeindividual>
+<surveyquestion>0</surveyquestion>
+<anyanswer>0</anyanswer>
+<casesensitive>0</casesensitive>
+<separator>|</separator>
+<relationship>0</relationship>
+</question>
+</page>
+<page>
+<index>6</index>
+<name>a001_knowledge_check_questions_page_33_knowledge_check_question_7_asking_language_preference_limited_english_ability.html</name>
+<question>
+<id>12302</id>
+<type>2</type>
+<weight>1</weight>
+<name>Question 9</name>
+<var>VarQuestion_0009</var>
+<text>Choose the best response; then, click the “Submit” button.</text>
+<correctans>No. This is not the best way. Instead, ask this recommended way, “In what language do you prefer to discuss your health care?”</correctans>
+<choices>Yes. This is the best way to determine a patient’s language preference. English or Spanish is usually fine.|No. This is not the best way. Instead, ask this recommended way, “In what language do you prefer to discuss your health care?”|Yes. This way is acceptable. Because the registration started out in English, it is okay to confirm language preference in this way.</choices>
+<allowmult>0</allowmult>
+<persist>0</persist>
+<gradeindividual>0</gradeindividual>
+<surveyquestion>0</surveyquestion>
+<anyanswer>0</anyanswer>
+<casesensitive>0</casesensitive>
+<separator>|</separator>
+<relationship>0</relationship>
+</question>
+</page>
+<page>
+<index>7</index>
+<name>a001_knowledge_check_questions_page_34_knowledge_check_question_8_asking_about_hispanic_or_latino_origin_ethnicity_.html</name>
+<question>
+<id>12348</id>
+<type>2</type>
+<weight>1</weight>
+<name>Question 10</name>
+<var>VarQuestion_0010</var>
+<text>Click the best response; then click the “Submit” button.</text>
+<correctans>This is not an acceptable question. An acceptable choice would be, “Would you consider yourself of Hispanic or Latino origin?”</correctans>
+<choices>This is not an acceptable question. An acceptable choice would be, “Would you consider yourself of Hispanic or Latino origin?”|This is an acceptable way to help the patient self-report and get a quick answer.|If the patient does not look Hispanic, there is no need to ask. Note the choice, and move on.</choices>
+<allowmult>0</allowmult>
+<persist>0</persist>
+<gradeindividual>0</gradeindividual>
+<surveyquestion>0</surveyquestion>
+<anyanswer>0</anyanswer>
+<casesensitive>0</casesensitive>
+<separator>|</separator>
+<relationship>0</relationship>
+</question>
+</page>
+<page>
+<index>8</index>
+<name>a001_knowledge_check_questions_final_screen.html</name>
+</page>
+<page>
+<index>9</index>
+<name>a001_knowledge_check_questions_page_36_acknowledgements_page.html</name>
+</page>
+</lectoratest>
