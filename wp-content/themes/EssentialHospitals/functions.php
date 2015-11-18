@@ -4082,76 +4082,77 @@ require_once('functions/class-presentations.php');
 
 function authenticate_user($email, $password){
 
-	// Create map with request parameters
-	$params = array(
-		'securityPassword'=> '27D5F4B5-57B2-4A67-BC82-AA2E1756DED3',
-		'username'            => $email,
-		'password'      => $password
+	$url = 'http://isgweb.naph.org/ibridge/Authentication.asmx/AuthenticateUser';
+	$result = wp_remote_post( $url, array(
+		'method' => 'POST',
+		'timeout' => 45,
+		'redirection' => 5,
+		'httpversion' => '1.0',
+		'blocking' => true,
+		'headers' => array(),
+		'body' => array('securityPassword'=> '27D5F4B5-57B2-4A67-BC82-AA2E1756DED3','username'=> $email,'password' => $password),
+		'cookies' => array()
+	    )
 	);
-  
-	$result = post_request('http://isgweb.naph.org/ibridge/Authentication.asmx/AuthenticateUser', $params);
+
+	$body  = wp_remote_retrieve_body($result);
+	//echo $body; 
+ 
+	//print_r($result);
+	if ($result['response']['message'] == 'OK'){  //if no status then an error occurred.
+ 
+ 		//Manipulate iBridge XML to get what we want into a string	
+ 		$body = preg_replace('/<string[^>]+\>/i', "", $body);
+ 		$body = str_replace('</string>', '', $body);
+ 		$body = substr($body, 85);
+ 
+ 		//Turn on XML Error Reporting
+ 		libxml_use_internal_errors(true);
+
+ 		//load in string to conver to  simpleXML
+ 		$xml = simplexml_load_string(html_entity_decode($body),'SimpleXMLElement', LIBXML_NOCDATA);
+ 		if ($xml === false) {
+		    echo "Failed loading XML\n";
+		    foreach(libxml_get_errors() as $error) {
+		        echo "\t", $error->message;
+		    }
+		}
+
+		//Create DOM element to traverse
+		$dom = dom_import_simplexml($xml);
+		if ($dom === false)return false;
+	 	 
+		//Get User Date!
+	 	$user = $dom->getElementsByTagName('User'); 
+	 	print_r($user->item(0)->getAttribute('ID'));
+	 	print_r($user->item(0)->getAttribute('EMAIL'));
+	 	print_r($user->item(0)->getAttribute('TOKEN'));
+	 	//.....
+
+	 	//SAVE TO ARRAY AND RETURN
+
+
 
  
-	
-	print_r($result);
- 
- 
-	if ($result['status'] == 'ok'){ 	
-
-		echo "<br><br><br>------------<br><br><br>";
-		$string = $result['content']; 
-		//print_r($string);
-
-	 	$xml = simplexml_load_string($result['content']);
-	 	$xml = dom_import_simplexml($xml);
-	 	$nodelist = $xml->getElementsByTagName('iBridge');
-	 	print_r($nodelist);
-		 
-
-
-		// $p = xml_parser_create();
-		// xml_parse_into_struct($p, $string, $vals, $index);
-		// xml_parser_free($p);
-		// echo "Index array\n";
-		// print_r($index);
-		// echo "\nVals array\n";
-		// print_r($vals);
- 
-
-		
-		
-		//echo $string;
-		//$string = str_replace('encoding="UTF-16"','',$string);
-		//$string = utf16_decode($string);
-		
-		//$xml = new SimpleXMLElement($string);
-
-		//print_r($xml->User[0]);
-
-
-
-		//$xml=simplexml_load_string($string) or die("Error: Cannot create object");
-		//var_dump($xml);
-
-		
- 
- 
-
-		//$xml = simplexml_load_string($xmlData)  or die("Error: Can not create object");
-
-      // print_r($xml);
-
- 
-		
- 
-		 
-
-
-		//return $result;
-	}else{
+	}
+	else{
 		return false;
 	}
+
+
+	//***************************************************************************************************
+
+ 
 }
+
+
+
+
+
+
+
+
+
 
 
 

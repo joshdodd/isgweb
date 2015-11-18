@@ -37223,3 +37223,75 @@ Content-Length: 29902
 
 **************************************************************
 
+Cron fired at: 2015-11-17 08:37:12
+Added 70 records to temp import table at 2015-11-17 08:37:13 taking 0 seconds.
+
+UNIX time range: 1447767433 - 1447767433
+
+Content-Length: 87154
+
+**************************************************************
+
+Cron fired at: 2015-11-17 11:03:01
+Added 76 records to temp import table at 2015-11-17 11:03:01 taking 0 seconds.
+
+UNIX time range: 1447776181 - 1447776181
+
+Content-Length: 94515
+
+**************************************************************
+
+Cron fired at: 2015-11-17 15:31:24
+Added 78 records to temp import table at 2015-11-17 15:31:25 taking 0 seconds.
+
+UNIX time range: 1447792285 - 1447792285
+
+Content-Length: 97129
+
+**************************************************************
+
+Cron fired at: 2015-11-17 15:36:57
+Added 78 records to temp import table at 2015-11-17 15:36:58 taking 0 seconds.
+
+UNIX time range: 1447792618 - 1447792618
+
+Content-Length: 97129
+
+**************************************************************
+
+Cron fired at: 2015-11-17 16:33:04
+Added 78 records to temp import table at 2015-11-17 16:33:05 taking 0 seconds.
+
+UNIX time range: 1447795985 - 1447795985
+
+Content-Length: 97129
+
+**************************************************************
+
+Cron fired at: 2015-11-17 17:34:03
+Added 79 records to temp import table at 2015-11-17 17:34:04 taking 1 seconds.
+
+UNIX time range: 1447799643 - 1447799644
+
+Content-Length: 98354
+
+**************************************************************
+
+Cron fired at: 2015-11-18 09:38:06
+Added 79 records to temp import table at 2015-11-18 09:38:07 taking 0 seconds.
+
+UNIX time range: 1447857487 - 1447857487
+
+Content-Length: 98354
+
+**************************************************************
+
+Cron fired at: 2015-11-18 10:32:54
+Added 79 records to temp import table at 2015-11-18 10:32:55 taking 1 seconds.
+
+UNIX time range: 1447860774 - 1447860775
+
+Content-Length: 98354
+
+**************************************************************
+
