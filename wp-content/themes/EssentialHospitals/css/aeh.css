@@ -1749,3 +1749,5 @@ input#real-btn{background-color: #F05135; border:1px solid #F05135; padding: 6px
 div.mce-edit-area{border: 1px solid #d3d3d3 !important;}
 .mce-i-fullscreen{display: none;}
 #mceu_14{display: none !important}
+
+.mce-statusbar{    visibility: hidden !important;}

@@ -221,7 +221,7 @@
 				<?php $links = get_field('links');
 					if($links){ ?>
 					<div class="panel">
-					<h3>External Links</h3>
+					<h3>Resources</h3>
 					<?php foreach($links as $link){ ?>
 							<div class="post">
 								<h4><a href="<?php echo $link['link']; ?>"><?php echo $link['heading']; ?></a></h4>

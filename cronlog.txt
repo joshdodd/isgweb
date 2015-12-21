@@ -37295,3 +37295,57 @@ Content-Length: 98354
 
 **************************************************************
 
+Cron fired at: 2015-12-17 16:43:29
+Added 84 records to temp import table at 2015-12-17 16:43:31 taking 1 seconds.
+
+UNIX time range: 1450388610 - 1450388611
+
+Content-Length: 104311
+
+**************************************************************
+
+Cron fired at: 2015-12-17 17:41:34
+Added 84 records to temp import table at 2015-12-17 17:41:35 taking 0 seconds.
+
+UNIX time range: 1450392095 - 1450392095
+
+Content-Length: 104311
+
+**************************************************************
+
+Cron fired at: 2015-12-18 09:49:32
+Added 84 records to temp import table at 2015-12-18 09:49:32 taking 0 seconds.
+
+UNIX time range: 1450450172 - 1450450172
+
+Content-Length: 104311
+
+**************************************************************
+
+Cron fired at: 2015-12-18 10:57:32
+Added 84 records to temp import table at 2015-12-18 10:57:33 taking 0 seconds.
+
+UNIX time range: 1450454253 - 1450454253
+
+Content-Length: 104311
+
+**************************************************************
+
+Cron fired at: 2015-12-18 16:05:46
+Added 84 records to temp import table at 2015-12-18 16:05:47 taking 0 seconds.
+
+UNIX time range: 1450472747 - 1450472747
+
+Content-Length: 104311
+
+**************************************************************
+
+Cron fired at: 2015-12-18 16:32:56
+Added 84 records to temp import table at 2015-12-18 16:32:57 taking 0 seconds.
+
+UNIX time range: 1450474377 - 1450474377
+
+Content-Length: 104311
+
+**************************************************************
+

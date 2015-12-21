@@ -116,8 +116,11 @@
 												echo "<p>";
 												the_field('teaser');
 												echo "</p>";
+									 
 											}else{  //USER ALREADY REGISTERED
 												the_content();
+										 
+
 											}
 										}
 									}else{
@@ -133,6 +136,7 @@
 											echo "</p>";
 										}else{  //USER ALREADY REGISTERED
 											the_content();
+											
 										}
 									}
 								}elseif(!is_user_logged_in() && $today < $webDate){
@@ -142,7 +146,8 @@
 									echo "</p>";
 									echo "<h4>Please sign in to access or register for this webinar.</h4>";
 								}else{
-									the_content();
+									the_field('teaser');
+								 
 								}
 
 								?>

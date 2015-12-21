@@ -2871,7 +2871,7 @@ function import_imis() {
 
 		if (EMAILCRON){
 			$headers = "From: Cron Job <cron@essentialhospitals.org>\r\n";
-			wp_mail('steve@meshfresh.com', 'iMIS data imported', $cronlogtext, $headers);
+			//wp_mail('steve@meshfresh.com', 'iMIS data imported', $cronlogtext, $headers);
 		}
 
 }
@@ -3345,7 +3345,7 @@ function add_one_imis_user($imis_id){
 
 /************************************ CUSTOM LOGIN FUNCTION TO RECORD LAST LOGIN TIME ************************************/
 
-add_action('wp_login', 'check_custom_authentication', 10, 2);
+//add_action('wp_login', 'check_custom_authentication', 10, 2);
 
 function check_custom_authentication($user_login, $user) {
 
@@ -4078,83 +4078,6 @@ require_once('functions/class-presentations.php');
 
 
 
-//AUTHENTICATE TEST//////////
-
-function authenticate_user($email, $password){
-
-	$url = 'http://isgweb.naph.org/ibridge/Authentication.asmx/AuthenticateUser';
-	$result = wp_remote_post( $url, array(
-		'method' => 'POST',
-		'timeout' => 45,
-		'redirection' => 5,
-		'httpversion' => '1.0',
-		'blocking' => true,
-		'headers' => array(),
-		'body' => array('securityPassword'=> '27D5F4B5-57B2-4A67-BC82-AA2E1756DED3','username'=> $email,'password' => $password),
-		'cookies' => array()
-	    )
-	);
-
-	$body  = wp_remote_retrieve_body($result);
-	//echo $body; 
- 
-	//print_r($result);
-	if ($result['response']['message'] == 'OK'){  //if no status then an error occurred.
- 
- 		//Manipulate iBridge XML to get what we want into a string	
- 		$body = preg_replace('/<string[^>]+\>/i', "", $body);
- 		$body = str_replace('</string>', '', $body);
- 		$body = substr($body, 85);
- 
- 		//Turn on XML Error Reporting
- 		libxml_use_internal_errors(true);
-
- 		//load in string to conver to  simpleXML
- 		$xml = simplexml_load_string(html_entity_decode($body),'SimpleXMLElement', LIBXML_NOCDATA);
- 		if ($xml === false) {
-		    echo "Failed loading XML\n";
-		    foreach(libxml_get_errors() as $error) {
-		        echo "\t", $error->message;
-		    }
-		}
-
-		//Create DOM element to traverse
-		$dom = dom_import_simplexml($xml);
-		if ($dom === false)return false;
-	 	 
-		//Get User Date!
-	 	$user = $dom->getElementsByTagName('User'); 
-	 	print_r($user->item(0)->getAttribute('ID'));
-	 	print_r($user->item(0)->getAttribute('EMAIL'));
-	 	print_r($user->item(0)->getAttribute('TOKEN'));
-	 	//.....
-
-	 	//SAVE TO ARRAY AND RETURN
-
-
-
- 
-	}
-	else{
-		return false;
-	}
-
-
-	//***************************************************************************************************
-
- 
-}
-
-
-
-
-
-
-
-
-
-
-
 
 // ----------- Remove Tag Metabox and Show as checklist -------------- //
  
@@ -4225,6 +4148,248 @@ function wd_hierarchical_tags_register() {
   ) );
 
 }
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//NEW FUNCTIONS!
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ 
+add_action('wp_head','pluginname_ajaxurl');
+function pluginname_ajaxurl() {
+?>
+<script type="text/javascript">
+var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
+</script>
+<?php
+}
+
+add_action( 'wp_ajax_login_authenticate', 'login_authenticate' );
+add_action( 'wp_ajax_nopriv_login_authenticate', 'login_authenticate' );
+
+function login_authenticate(){
+	
+	$email = $_POST['email'];
+	$password = $_POST['password'];
+
+
+
+
+	$url = 'http://isgweb.naph.org/ibridge/Authentication.asmx/AuthenticateUser';
+	$result = wp_remote_post( $url, array(
+		'method' => 'POST',
+		'timeout' => 45,
+		'redirection' => 5,
+		'httpversion' => '1.0',
+		'blocking' => true,
+		'headers' => array(),
+		'body' => array('securityPassword'=> '27D5F4B5-57B2-4A67-BC82-AA2E1756DED3','username'=> $email,'password' => $password),
+		'cookies' => array()
+	    )
+	);
+
+	$body  = wp_remote_retrieve_body($result);
+	//echo $body; 
+ 
+	//print_r($result);
+	if ($result['response']['message'] == 'OK'){  //if no status then an error occurred.
+ 
+		//NEED TO CHECK HERE FOR AUTHENTICATE OR NOT!!!
+
+
+ 		//Manipulate iBridge XML to get what we want into a string	
+ 		$body = preg_replace('/<string[^>]+\>/i', "", $body);
+ 		$body = str_replace('</string>', '', $body);
+ 		$body = substr($body, 85);
+ 
+ 
+ 		//Turn on XML Error Reporting
+ 		libxml_use_internal_errors(true);
+
+ 		//load in string to conver to  simpleXML
+ 		$xml = simplexml_load_string(html_entity_decode($body),'SimpleXMLElement', LIBXML_NOCDATA);
+ 		if ($xml === false) {
+		    echo "Failed loading XML\n";
+		    foreach(libxml_get_errors() as $error) {
+		        echo "\t", $error->message;
+		    }
+		}
+
+		//Create DOM element to traverse
+		$dom = dom_import_simplexml($xml);
+		if ($dom === false)return false;
+
+		//print_r($dom);
+	 	 
+		//Get User Data!
+	 	$user = $dom->getElementsByTagName('User'); 
+
+ 
+	 	//Failed Attempt
+	 	if($user->item(0) == 0){
+
+ 			return false;
+ 			
+	 	}
+	 	else{
+	 		//Success 
+	 		$token = $user->item(0)->getAttribute('TOKEN');
+	 		$email = $user->item(0)->getAttribute('EMAIL');
+	 		//login_wp_user("joshdodssddd@mailer.com");
+	 		login_wp_user($email);
+
+
+	 		//print_r($user->item(0)->getAttribute('ID'));
+	 		//print_r($user->item(0)->getAttribute('EMAIL'));
+	 		//print_r($user->item(0)->getAttribute('TOKEN'));
+	 		 
+	 	}
+ 
+
+	 	//SAVE TO ARRAY AND RETURN
+
+
+
+ 
+	}
+	else{
+		return false;
+	}
+
+
+	//***************************************************************************************************
+
+ 
+}
+
+
+function login_wp_user($email){
+
+	$user = get_user_by('email', $email );
+		//print_r($user);
+	// Redirect URL //
+	if ( $user != '')
+	{
+	    wp_clear_auth_cookie();
+	    wp_set_current_user ( $user->ID );
+	    wp_set_auth_cookie  ( $user->ID );
+        do_action( 'wp_login', $user_login, $user );
+
+	    // $redirect_to = user_admin_url();
+	    // wp_safe_redirect( $redirect_to );
+	    exit();
+	}
+
+	else{
+		//User Doesn't exist, create user and login
+		if( null == username_exists( $email_address ) ) {
+			print_r("OK");
+			$password = wp_generate_password( 12, true );
+			$user_id = wp_create_user($email, $password, $email);
+			login_wp_user($email);
+		}
+	}
+ 
+}
+
+ 
+
+
+
+
+
+
+//AUTHENTICATE TEST//////////
+
+function authenticate_user($email, $password){
+
+	$url = 'http://isgweb.naph.org/ibridge/Authentication.asmx/AuthenticateUser';
+	$result = wp_remote_post( $url, array(
+		'method' => 'POST',
+		'timeout' => 45,
+		'redirection' => 5,
+		'httpversion' => '1.0',
+		'blocking' => true,
+		'headers' => array(),
+		'body' => array('securityPassword'=> '27D5F4B5-57B2-4A67-BC82-AA2E1756DED3','username'=> $email,'password' => $password),
+		'cookies' => array()
+	    )
+	);
+
+	$body  = wp_remote_retrieve_body($result);
+	//echo $body; 
+ 
+	//print_r($result);
+	if ($result['response']['message'] == 'OK'){  //if no status then an error occurred.
+ 
+ 		//Manipulate iBridge XML to get what we want into a string	
+ 		$body = preg_replace('/<string[^>]+\>/i', "", $body);
+ 		$body = str_replace('</string>', '', $body);
+ 		$body = substr($body, 85);
+ 
+ 		//Turn on XML Error Reporting
+ 		libxml_use_internal_errors(true);
+
+ 		//load in string to conver to  simpleXML
+ 		$xml = simplexml_load_string(html_entity_decode($body),'SimpleXMLElement', LIBXML_NOCDATA);
+ 		if ($xml === false) {
+		    echo "Failed loading XML\n";
+		    foreach(libxml_get_errors() as $error) {
+		        echo "\t", $error->message;
+		    }
+		}
+
+		//Create DOM element to traverse
+		$dom = dom_import_simplexml($xml);
+		if ($dom === false)return false;
+	 	 
+		//Get User Date!
+	 	$user = $dom->getElementsByTagName('User'); 
+
+	 	print_r($user->item(0)->getAttribute('ID'));
+	 	print_r($user->item(0)->getAttribute('EMAIL'));
+	 	print_r($user->item(0)->getAttribute('TOKEN'));
+	 	//.....
+
+	 	//SAVE TO ARRAY AND RETURN
+
+
+
+ 
+	}
+	else{
+		return false;
+	}
+
+
+	//***************************************************************************************************
+
+ 
+}
+
+
+
+
+
+
+
+
+
 
  
  
