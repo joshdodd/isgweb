@@ -394,7 +394,8 @@ table {  max-width: 100%;  background-color: transparent;}
 .single #contentSecondary{float:left;margin: 0 0 0 8px;width: 264px;padding: 0 0 0 7px;border-left:1px solid #d3d3d3;}
 	.single #contentSecondary .gutter{padding:59px 3px 20px 2px;border-top:8px solid #e4e4e4;}
 		.single .action #contentSecondary .gutter{border-top-color:#F05135;}
-	.single #contentSecondary .panel{width: 95%;padding: 0 0 0 14px;border-top: 1px solid #ccc;}
+	.single #contentSecondary .panel{width: 95%;padding: 0 0 0 14px;border-bottom: 1px solid #ccc;}
+	.single #contentSecondary .panel.noborder{border-top: none;}
 
 .single #contentTertiary{float: left;margin: 0 0 0 7px;padding: 0 0 0 8px;width: 197px;border-left: 1px solid #d3d3d3;}
 	.single #contentTertiary .gutter{padding:59px 16px 20px 5px;border-top:8px solid #e4e4e4;}
@@ -1326,7 +1327,7 @@ ul#menu-primary-menu li{position: relative;overflow: hidden;height: 38px;padding
 	.navigation ul#menu-primary-menu li:hover a{color:#fff;}
 
 
-.blog-social{}
+/*.blog-social{}
 	.blog-social .addthis_toolbox{text-align:center;}
 	.blog-social .addthis_toolbox > a{height: 25px;width: 25px;margin: 0 8px 0 0;display: inline-block;}
 	.blog-social .addthis_toolbox > a > span{height:25px !important;width:25px !important;display:block;background:url(http://essentialhospitals.org/wp-content/themes/EssentialHospitals/images/social_icons-blog.png) no-repeat !important;}
@@ -1339,22 +1340,10 @@ ul#menu-primary-menu li{position: relative;overflow: hidden;height: 38px;padding
 		.blog-social .addthis_toolbox span.aticon-digg{background:url(http://essentialhospitals.org/wp-content/themes/EssentialHospitals/images/social_icons-blog.png) no-repeat !important;background-position:-176px 0 !important;width:28px !important}
 		.blog-social .addthis_toolbox span.aticon-evernote{background:url(http://essentialhospitals.org/wp-content/themes/EssentialHospitals/images/social_icons-blog.png) no-repeat !important;background-position:-146px 0 !important;}
 		.blog-social .addthis_toolbox span.aticon-compact{background:url(http://essentialhospitals.org/wp-content/themes/EssentialHospitals/images/social_icons-blog.png) no-repeat !important;background-position:-204px 0 !important;}
+*/
 
-
-#share{}
-	#share .addthis_toolbox{text-align:center;}
-	#share .addthis_toolbox > a{height: 25px;width: 25px;margin: 3px 3px;float: left;}
-	#share .addthis_toolbox > a > span{height:25px !important;width:25px !important;display:block;background:url(http://essentialhospitals.org/wp-content/themes/EssentialHospitals/images/social_icons-single.png) no-repeat !important;}
-		#share .addthis_toolbox span.aticon-facebook{background:url(http://essentialhospitals.org/wp-content/themes/EssentialHospitals/images/social_icons-single.png) no-repeat !important;background-position:-25px 0 !important;}
-		#share .addthis_toolbox span.aticon-twitter{background:url(http://essentialhospitals.org/wp-content/themes/EssentialHospitals/images/social_icons-single.png) no-repeat !important;background-position:-50px 0 !important;}
-		#share .addthis_toolbox span.aticon-linkedin{background:url(http://essentialhospitals.org/wp-content/themes/EssentialHospitals/images/social_icons-single.png) no-repeat !important;background-position:-2px 0 !important;}
-		#share .addthis_toolbox span.aticon-pinterest_share{background:url(http://essentialhospitals.org/wp-content/themes/EssentialHospitals/images/social_icons-single.png) no-repeat !important;background-position:-74px 0 !important;}
-		#share .addthis_toolbox span.aticon-google_plusone_share{background:url(http://essentialhospitals.org/wp-content/themes/EssentialHospitals/images/social_icons-single.png) no-repeat !important;background-position:-124px 0 !important;}
-		#share .addthis_toolbox span.aticon-email{background:url(http://essentialhospitals.org/wp-content/themes/EssentialHospitals/images/social_icons-single.png) no-repeat !important;background-position:-98px 0 !important;}
-		#share .addthis_toolbox span.aticon-digg{background:url(http://essentialhospitals.org/wp-content/themes/EssentialHospitals/images/social_icons-single.png) no-repeat !important;background-position:-176px 0 !important;width:28px !important}
-		#share .addthis_toolbox span.aticon-evernote{background:url(http://essentialhospitals.org/wp-content/themes/EssentialHospitals/images/social_icons-single.png) no-repeat !important;background-position:-146px 0 !important;}
-		#share .addthis_toolbox span.aticon-compact{background:url(http://essentialhospitals.org/wp-content/themes/EssentialHospitals/images/social_icons-single.png) no-repeat !important;background-position:-204px 0 !important;}
-
+ 		.addthis_toolbox a span svg{fill: #999; background-color: #fff;}
+ 		.addthis_toolbox a span svg:hover{fill: #999; background-color: #fff; opacity: 1}
 
 
 .panel ul{margin:0 0 0 10px;list-style-type:disc;}

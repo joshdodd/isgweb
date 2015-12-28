@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -23,12 +23,13 @@ $(document).ready(function(){
 	//$("#add_err").css('display', 'none', 'important');
  
 
-	$("#loginbtn").click(function(e){
+	$("#loginform").submit(function(e){
 		e.preventDefault();
+		console.log('submitted');
 
 		var email = $("#name").val();
 		var	password = $("#word").val();
-		
+		console.log(password);
 
 		$.ajax({
 			type: "POST",
@@ -37,16 +38,15 @@ $(document).ready(function(){
 					password:password,
 					action:'login_authenticate'}
 		}).done(function(response){
-			
+			console.log(response);
 
 			if(response){
 				if(response == 0){
-					$("#add_err").html("Try Again!");
-		 
-					
+					$("#wpmem_msg").show();
+ 
 				}
 			 	else{
-			 		$("#add_err").html("Success");
+					$(".tester").html("Success");
 				}
 				//console.log(response);
 				// respond and append to table
@@ -877,8 +877,8 @@ $(document).ready(function(){
 		});
 	});
 
-	//Layout manips to satiate the mockups
-	$('#loginForm form fieldset div[align^="right"]').addClass('speciallittlesnowflakes');
+ 
+	//$('#loginForm form fieldset div[align^="right"]').addClass('speciallittlesnowflakes');
 
 	//Registration and Login
 		//login form placeholders

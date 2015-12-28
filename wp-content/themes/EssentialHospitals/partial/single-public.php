@@ -178,7 +178,7 @@
 		</div>
 			<div id="contentSecondary">
 				<div class="gutter clearfix">
-					<div class="panel">
+					<div class="panel ">
 					<?php
 					$orig_post = $post;
 					global $post;

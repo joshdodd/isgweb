@@ -829,7 +829,7 @@ nav.membernav.hospital li.members-only{display:block;}
 		#loginForm .new-reg a{vertical-align:middle;float:right;color:#fff;border:1px solid #fff;border-radius:2px;padding:8px;font-size:12px;font-weight:bold;margin:-10px 0 0;transition:0.2s all;-webkit-transition:0.2s all;-moz-transition:0.2s all;-ms-transition:0.2s all;-o-transition:0.2s all;}
 			#loginForm .new-reg a:hover{background:#fff;color:#565656;opacity:1;}
 
-	#loginForm #wpmem_msg{width: 219px;float: left;border: 1px solid #F05135;border-radius: 2px;background: #FCD7D1;padding: 10px 20px;color: #f05135;margin: 0 0 20px;}
+	#loginForm #wpmem_msg{width: 219px; float: right; border: 1px solid #F05135;border-radius: 2px;background: #FCD7D1;padding: 10px 20px;color: #f05135;margin: 0 -13px 20px; display: none;}
 		#loginForm #wpmem_msg h2{display:none;}
 		#loginForm #wpmem_msg p{color: #f05135;}
 		#loginForm #wpmem_msg a{display:none;}
