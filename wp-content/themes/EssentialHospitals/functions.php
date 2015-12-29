@@ -600,7 +600,7 @@ register_sidebar( array(
 
   /* admin part cleanups */
   add_action('admin_menu','remove_dashboard_widgets'); // cleaning dashboard widgets
-  add_action('admin_menu', 'delete_menu_items'); // deleting menu items from admin area
+  //add_action('admin_menu', 'delete_menu_items'); // deleting menu items from admin area
   add_action('admin_menu','customize_meta_boxes'); // remove some meta boxes from pages and posts edition page
   add_filter('manage_posts_columns', 'custom_post_columns'); // remove column entries from list of posts
   add_filter('manage_pages_columns', 'custom_pages_columns'); // remove column entries from list of page
@@ -2422,7 +2422,7 @@ function possibly_redirect(){
     exit();
   }
 }
-add_action('init','possibly_redirect');
+//add_action('init','possibly_redirect');
 
 
 apply_filters('coauthors_show_create_profile_user_link',true);
@@ -2727,13 +2727,16 @@ function login_authenticate(){
 	 		$email = $user->item(0)->getAttribute('EMAIL');
 
 	 		//login_wp_user("joshdodssddd@mailer.com");
-	 		login_wp_user($email);
 
+	 		login_wp_user($email);
+	 		//GRAB MEMBER TYPE AND UPDATE USER META for MEM TYPE (and others?)
+ 
 
 	 		//print_r($user->item(0)->getAttribute('ID'));
 	 		//print_r($user->item(0)->getAttribute('EMAIL'));
 	 		//print_r($user->item(0)->getAttribute('TOKEN'));
-	 		 
+	 		//print_r($user->item(0)->getAttribute('MEMBER_TYPE'));
+
 	 	}
  
 
@@ -2757,7 +2760,7 @@ function login_authenticate(){
 function login_wp_user($email){
 
 	$user = get_user_by('email', $email );
-		//print_r($user);
+ 
 	// Redirect URL //
 	if ( $user != '')
 	{
@@ -2765,6 +2768,8 @@ function login_wp_user($email){
 	    wp_set_current_user ( $user->ID );
 	    wp_set_auth_cookie  ( $user->ID );
         do_action( 'wp_login', $user_login, $user );
+
+
 
 	    // $redirect_to = user_admin_url();
 	    // wp_safe_redirect( $redirect_to );

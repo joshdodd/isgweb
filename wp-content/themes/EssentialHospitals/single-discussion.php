@@ -21,11 +21,7 @@
 							<?php get_template_part('membernetwork/searchform','discussion'); ?>
 						</div>
 					</div>
-					<div class="panel date">
-						<div class="gutter clearfix">
-							<span class="bump sortdate">Sort by Date &raquo;</span>
-						</div>
-					</div>
+ 
 					<div class="panel topic">
 						<div class="gutter clearfix">
 							<p class="topic"><strong>POPULAR TOPICS</strong></p>
@@ -44,7 +40,10 @@
 						<div class="gutter clearfix">
 							<h2 class="heading quality"><?php the_title(); ?>
 
-							<?php $pid = get_the_id();
+							<?php 
+
+								//Get assocaiated Group/Webinar Pages
+								$pid = get_the_id();
 								$pterm = wp_get_post_terms($pid,'discussions');
 								foreach($pterm as $term){
 									if($term->parent == 38 || $term->parent == 110){

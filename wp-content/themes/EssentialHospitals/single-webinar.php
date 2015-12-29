@@ -17,19 +17,41 @@
 
 	<div class="container">
 		<?php
-			$memberArray = array();
+			//Set up isg auth data
+			$isgCheck = false;
+			$imis_code = get_post_meta($post->ID, 'imis_code');  // get iMIS code post meta
+			$imis_type = "CONFCALL";
+
+			//get current user info
 			$currentUser = get_current_user_id();
+			$user_info = get_userdata($currentUser );
+			$user_email = $user_info->user_email;
+
+			if($imis_code !='' && $user_email!=''){
+				//NEED NEW AUTH FUNCITON HERE
+				//$isgCheck = check_webinar_access($user_email,$imis_type ,$imis_code);
+			}
+
+			//Check legacy member array 
+			$memberArray = array();
 			$members = get_post_meta($post->ID, 'autp');
-				foreach($members as $member){
-					foreach($member as $user){
-						$id = $user['user_id'];
-						array_push($memberArray,$id);
-					}  }
-				if (in_array($currentUser, $memberArray)) {
-				    $checker = true;
-				}else{
-					$checker = false;
-				}
+			foreach($members as $member){
+				foreach($member as $user){
+					$id = $user['user_id'];
+					array_push($memberArray,$id);
+				}  
+			}
+			
+			//Assign access level based on legacy auth and new isg auth
+			if (in_array($currentUser, $memberArray) || $isgCheck == true) {
+			    $checker = true;
+			}else{
+				$checker = false;
+			}
+
+ 
+
+
 			if(has_nav_menu('primary-menu')){
 				$defaults = array(
 					'theme_location'  => 'primary-menu',
@@ -124,7 +146,9 @@
 											}
 										}
 									}else{
-										if($checker == false && $today < $webDate){
+										//PUBLIC WEBINAR 
+										if($checker == false && $today < $webDate){ 
+											//USER NOT SIGNED UP AND STILL TIME TO REGISTER
 											echo "<p>";
 											the_field('teaser');
 											echo "</p>";

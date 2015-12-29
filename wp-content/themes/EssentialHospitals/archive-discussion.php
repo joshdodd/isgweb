@@ -20,11 +20,7 @@
 							<?php get_template_part('membernetwork/searchform','discussion'); ?>
 						</div>
 					</div>
-					<div class="panel date">
-						<div class="gutter clearfix">
-							<span class="bump sortdate">Sort by Date &raquo;</span>
-						</div>
-					</div>
+	 
 					<div class="panel topic">
 						<div class="gutter clearfix">
 							<p class="topic"><strong>POPULAR TOPICS</strong></p>

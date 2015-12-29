@@ -43,7 +43,6 @@ $(document).ready(function(){
 			if(response){
 				if(response == 0){
 					$("#wpmem_msg").show();
- 
 				}
 			 	else{
 					$(".tester").html("Success");

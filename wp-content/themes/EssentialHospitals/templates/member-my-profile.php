@@ -49,9 +49,7 @@ if(($aeh_member  == 'hospital')&&($imisid != '')){
 		$asst_phone    = $imisdata['asst_phone'];
 		$asst_email    = $imisdata['asst_email'];
 		$webinterest   = $imisdata['webinterest'];
-
-
-
+ 
 		update_user_meta($userID, 'first_name', $firstname);
 		update_user_meta($userID, 'middle_name', $middlename);
 		update_user_meta($userID, 'last_name', $lastname);

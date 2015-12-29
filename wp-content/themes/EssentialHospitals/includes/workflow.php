@@ -38,7 +38,7 @@ function onsave_moderation($post_id){
 			$subject = 'Article for review';
 			$message = "You have been flagged as an editor for $postTitle .<br>
 						Go <a href='$postLink'>here</a> to review the publication.";
-			wp_mail($editorEmail, $subject, $message, $headers);
+			//wp_mail($editorEmail, $subject, $message, $headers);
 
 			//Add meta for current editor & save as coauthor
 			add_post_meta($post_id,'curEdit',$editorID,true) || update_post_meta($post_id,'curEdit',$editorID);

@@ -57,25 +57,50 @@
 
 		<?php wp_reset_postdata();
             global $post;
+
+            //check if page has a parent group
 			$memberArray = array();
 			$currentUser = get_current_user_id();
+
 			if($post->post_parent){
 				$parent = array_reverse(get_post_ancestors($post->ID));
-				$members = get_post_meta($parent[0], 'autp');
+				$members = get_post_meta($parent[0], 'autp'); //Get legacy members of parent group
+				$imis_code = get_post_meta($parent[0], 'imis_code'); //Get imis code of parent group for new auth
 			}else{
-				$members = get_post_meta($post->ID, 'autp');
+				$members = get_post_meta($post->ID, 'autp'); //Get legacy members 
+				$imis_code = get_post_meta($post->ID, 'imis_code'); //Get imis code for new auth
 			}
-			//print_r($members);
-				foreach($members as $member){
-					foreach($member as $user){
-						$id = $user['user_id'];
-						array_push($memberArray,$id);
-					}  }
-				if (in_array($currentUser, $memberArray)) {
-				    $checker = true;
-				}else{
-					$checker = false;
-				} ?>
+		 
+		 	//Add in logic here to modify checker based on imis Stored Procedure. 
+			//Set up isg auth data
+			$isgCheck = false;
+			$imis_type = "COMMITTEE"; //Need to check this - could be JOB_FUNCTION, EVENT, ETC
+
+			//get current user email
+			$user_info = get_userdata($currentUser );
+			$user_email = $user_info->user_email;
+
+			if($imis_code !='' && $user_email!=''){
+				//NEED NEW AUTH FUNCITON HERE
+				//$isgCheck = check_webinar_access($user_email,$imis_type ,$imis_code);
+			}
+
+			//Check legacy member array 
+			foreach($members as $member){
+				foreach($member as $user){
+					$id = $user['user_id'];
+					array_push($memberArray,$id);
+				}  
+			}
+ 
+			//Assign access level based on legacy auth and new isg auth
+			if (in_array($currentUser, $memberArray) || $isgCheck == true) {
+			    $checker = true;
+			}else{
+				$checker = false;
+			}
+
+		?>
 
 		<?php
 		if ($pageTitle != ''){
