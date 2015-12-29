@@ -20,7 +20,7 @@
 			//Set up isg auth data
 			$isgCheck = false;
 			$imis_code = get_post_meta($post->ID, 'imis_code');  // get iMIS code post meta
-			$imis_type = "CONFCALL";
+			$imis_type = "CONFCALL"; //may change to post_meta / custom field?
 
 			//get current user info
 			$currentUser = get_current_user_id();

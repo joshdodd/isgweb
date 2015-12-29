@@ -624,7 +624,7 @@ register_sidebar( array(
   remove_action('wp_head','adjacent_posts_rel_link_wp_head');
   remove_action('wp_head', 'wp_generator'); // remove WP version from header
   remove_action('wp_head','wp_shortlink_wp_head');
-  remove_filter( 'the_content', 'capital_P_dangit' ); // Get outta my Wordpress codez dangit!
+  remove_filter( 'the_content', 'capital_P_dangit' );  
   remove_filter( 'the_title', 'capital_P_dangit' );
   remove_filter( 'comment_text', 'capital_P_dangit' );
 

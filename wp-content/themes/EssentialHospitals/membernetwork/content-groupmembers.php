@@ -6,6 +6,16 @@ if($post->post_parent){
 }else{
 	$members = get_post_meta($post->ID, 'autp');
 }
+
+/*
+1. Call SP - send imis_type and imis_code.
+2. Return array of imis IDS
+3. Build array of wp ids (create new user if imis id doesn't exist?)
+4. Combine new array with legacy $members arry
+*/
+
+
+
 foreach($members as $member){
 	$first = array_slice($member, 0, 9);
 	$second = array_slice($member,9);
