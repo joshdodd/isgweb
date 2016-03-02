@@ -78,7 +78,7 @@
 
 		
 	.group-members{width:265px;padding:0 6px 0 8px;border-left:1px solid #e1e1e1;border-right:1px solid #e9e9e9;}
-	.group-resources{width:260px;padding:0 0 0 10px;border-left:1px solid #e1e1e1;}
+	.group-resources{width:272px;padding:0 0 0 8px;border-left:1px solid #e1e1e1;}
 
 	.group-discussion{position: relative;margin: 8px 0;padding: 37px 33px 8px 36px;border-top: 1px solid #d3d3d3;}
 		.group-discussion .gutter{}

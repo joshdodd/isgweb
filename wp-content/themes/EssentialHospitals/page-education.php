@@ -84,26 +84,7 @@ $speakerIMG = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
 									<h2>Dashboard Sign-In</h2>
 									
 									<?php get_template_part('partial/login','smallform'); ?>
-
-
-
-									 <?php $args = array(
-							        'echo' => true,
-							        'redirect' => site_url( $_SERVER['REQUEST_URI'] ),
-							        'form_id' => 'loginform',
-							        'label_username' => __( 'Username' ),
-							        'label_password' => __( 'Password' ),
-							        'label_remember' => __( 'Remember Me' ),
-							        'label_log_in' => __( '&raquo;' ),
-							        'id_username' => 'user_login',
-							        'id_password' => 'user_pass',
-							        'id_remember' => 'rememberme',
-							        'id_submit' => 'wp-submit',
-							        'remember' => false,
-							        'value_username' => NULL,
-							        'value_remember' => false );
-							  //wp_login_form($args); ?>
-
+ 
 
 								</div>
 							</div>

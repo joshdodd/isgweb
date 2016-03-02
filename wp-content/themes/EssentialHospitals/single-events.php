@@ -479,25 +479,9 @@ the_post(); ?>
 					<div class="panel signin">
 							<div class="gutter">
 								<h2>Sign In</h2>
-								<?php  
-										echo "<p>Sign in to view this event</p>";
+								 <p>Sign in to view this event</p> 
  
-								 $args = array(
-						        'echo' => true,
-						        'redirect' => site_url( $_SERVER['REQUEST_URI'] ),
-						        'form_id' => 'loginform',
-						        'label_username' => __( 'Username' ),
-						        'label_password' => __( 'Password' ),
-						        'label_remember' => __( 'Remember Me' ),
-						        'label_log_in' => __( '&raquo;' ),
-						        'id_username' => 'user_login',
-						        'id_password' => 'user_pass',
-						        'id_remember' => 'rememberme',
-						        'id_submit' => 'wp-submit',
-						        'remember' => false,
-						        'value_username' => NULL,
-						        'value_remember' => false );
-						        wp_login_form($args); ?>
+								 <?php get_template_part('partial/login','smallform'); ?>
 							</div>
 						</div>
 					<?php }?>

@@ -1755,7 +1755,7 @@ div.mce-edit-area{border: 1px solid #d3d3d3 !important;}
  
 /* SMALL LOGIN FORM MODULES */
 .panel.signin{background-color: #565656;}
-	.panel.signin h2 {color: white;}
+	.panel.signin h2, .panel.signin p {color: white;}
 
 #loginSmall{width:auto; float: left; padding: 0px 0px 0 0;}
 	#loginSmall > div {clear: both;float: left;}
