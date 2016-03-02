@@ -1,9 +1,9 @@
 <div id="loginBoxPanel">
 	<div class="container">
 	    <div id='loginForm'>
-			<div align="center" id="wpmem_msg">
+			<div align="center" id="wpmem_msg" style="display: none;">
 				<h2 id="wpmemloginfail">Login Failed!</h2>
-				<p id="wpmemloginmsg">You entered an invalid username or password.</p>
+				<p id="wpmemloginmsg">You entered an invalid username or password. Please try again</p> 
 			</div>
 
 
@@ -26,14 +26,14 @@
  
 					<div class="button_div">
 		 
-						<div class="submit-reg"><input type="submit" name="Submit" value="Login" class="buttons"></div>
+						<div class="submit-reg"><input id="login_submit" type="submit" name="Submit" value="Login" class="buttons"></div>
 					</div>
 
 					<div class="clear"></div>
 					<div align="right" class="pass-reg "><a href="http://localhost/essentialhospitals/membernetwork/my-profile/?a=pwdreset">Forgot your password?</a></div>
 					<div align="right" class="new-reg ">Don't have an account?&nbsp;<a href="http://localhost/essentialhospitals/membernetwork/registration/">Sign up</a></div>
 					<div class="clear"></div>
-					<div class="tester">test</div>
+					<div class="tester"> </div>
 				</fieldset>
 			</form>
 		</div>

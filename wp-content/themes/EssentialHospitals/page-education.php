@@ -79,7 +79,14 @@ $speakerIMG = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
 							<?php if(!is_user_logged_in()){ ?>
 							<div class="panel signin">
 								<div class="gutter">
+
+
 									<h2>Dashboard Sign-In</h2>
+									
+									<?php get_template_part('partial/login','smallform'); ?>
+
+
+
 									 <?php $args = array(
 							        'echo' => true,
 							        'redirect' => site_url( $_SERVER['REQUEST_URI'] ),
@@ -95,7 +102,9 @@ $speakerIMG = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
 							        'remember' => false,
 							        'value_username' => NULL,
 							        'value_remember' => false );
-							        wp_login_form($args); ?>
+							  //wp_login_form($args); ?>
+
+
 								</div>
 							</div>
 							<?php }else{

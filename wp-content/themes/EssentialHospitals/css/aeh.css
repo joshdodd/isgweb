@@ -147,18 +147,7 @@ table {  max-width: 100%;  background-color: transparent;}
 	#searchForm input{border: 0 none;float: left;margin: 0;}
 	#searchForm input[type="text"]{margin-right:3px;width:170px;}
 
-#loginBoxPanel{background:#565656;color:#fff;font-size:13px;padding:0;position:relative;text-align:left;width:100%;margin:auto;z-index:1;float:left;display:none;}
-	/*#loginBoxPanel:after{border-color: #565656 rgba(0, 0, 0, 0);border-style: solid;border-width: 15px 15px 0;bottom: -15px;content: "";display: block;left: 0;position: absolute;width: 0;}*/
-	#loginBoxPanel.top:after{border-color: #565656 rgba(0, 0, 0, 0);border-width: 0 10px 10px;bottom: auto;left: auto;right: 17px;top: -10px;}
-	#loginBoxPanel a{color:#fff;display:inline;}
 
-#loginForm{float: right;padding: 20px 20px 0 0;}
-	#loginForm legend{display:none;}
-	#loginForm p.login-remember{float:left;}
-	#loginForm label{color:#ccc;margin:0 0 5px 0;text-align:left;}
-	#loginForm input{border:none;float:left;margin:0 0 10px;}
-	#loginForm input[type="submit"]{float:right;margin:0 3px 0 0;width:70px;color:#fff;margin:0 auto;font-weight:bold;font-size: 11px;background:#2e2e2e;padding:6px 10px;border-top:1px solid #ababab;text-transform: uppercase;border-radius:3px;behavior: url(http://essentialhospitals.org/wp-content/themes/EssentialHospitals/css/PIE.htc);}
-	#loginForm p{color:#fff;margin:0 0 5px 0;text-align:left;}
 
 #header{height:70px;position:relative;display:block;overflow: visible;}
 	#header .logo{background:none;left:-10px;position:absolute;top:-4px;z-index:2000;margin:-30px 0 0 0;}
@@ -740,11 +729,7 @@ table {  max-width: 100%;  background-color: transparent;}
 			.education .panel p.login-password,.panel.signin p.login-password {width: 90%;float: left;}
 			.education .panel p.login-submit,.panel.signin p.login-submit {float: left;width: 7%;margin: 16px 0 0 2%;}
 		.education .panel label {font-style: italic;}
-		.education .panel form input[type="text"]{width:96%;}
-		.education .panel form textarea{max-width:100%;resize: none;}
-		.education .panel form input[type="password"],.panel.signin form input[type="password"]{width:96%;}
-		.education .panel form input[type="submit"],.panel.signin form input[type="submit"]{background: url("http://essentialhospitals.org/wp-content/themes/EssentialHospitals/images/newsletter_btn.png") no-repeat #F05135 !important;border: 0 none;border-radius: 3px;float: left;height: 24px;margin-top:4px;text-indent: -5000px;width: 24px;behavior: url(http://essentialhospitals.org/wp-content/themes/EssentialHospitals/css/PIE.htc);}
-
+		
 .panel.ask{}
 	.panel.ask .frm_forms{position:relative;float:left;width:100%;}
 	.panel.ask .frm_submit{position:absolute;bottom: 42px;right: -10px;}
@@ -791,16 +776,8 @@ table {  max-width: 100%;  background-color: transparent;}
 	.webinar .bot-border{border-bottom: 1px solid #D6D6D6;bottom:-6px;height: 6px;position: absolute;width: 100%;background: #fff;}
 	.webinar .post .graybarright{right:-6px;}
 
-	.single-webinar .panel form{width: 108%;float: left;}
-		.single-webinar .panel form p{margin:0 0 -14px 0;}
-			.single-webinar .panel p.login-username {width: 100%;}
-			.single-webinar .panel p.login-password {width: 90%;float: left;}
-			.single-webinar .panel p.login-submit {float: left;width: 7%;margin: 16px 0 0 2%;}
-		.single-webinar .panel label {font-style: italic;}
-		.single-webinar .panel form input[type="text"]{width:96%;}
-		.single-webinar .panel form textarea{max-width:100%;resize: none;}
-		.single-webinar .panel form input[type="password"]{width:96%;}
-		.single-webinar .panel form input[type="submit"]{background: #f05135;border: none;color: #fff;font-size: 18px;letter-spacing: -3px;line-height: 17px;padding: 4px 8px;}
+	.single-webinar .panel  
+ 
 
 
 	/* EHU */
@@ -1113,10 +1090,7 @@ filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='6');}
 	#searchWrap form{display:none;}
 		#searchWrap.active form{display:block;}
 	#searchWrap label{display:none;}
-	#searchWrap input[type="text"]{float: left;margin: 3px 0 0 0;background: none;width: 92%;background: #fff;height: 10px;text-transform:uppercase;}
-	#searchWrap input[type="submit"]{background: url("http://essentialhospitals.org/wp-content/themes/EssentialHospitals/images/newsletter_btn.png") center center no-repeat #F05135;border: 0 none;border-radius: 3px;height: 24px;margin-top:3px;text-indent: -5000px;width:5%;behavior: url(http://essentialhospitals.org/wp-content/themes/EssentialHospitals/css/PIE.htc);}
-
-
+ 
 		#searchWrap input[type="submit"]:hover{cursor: pointer;}
 	#searchQuery {background: #FFFFFF;float: left;padding: 0;width: 89%;position: absolute;z-index: 10000;top: 30px;left: 0;display:none;}
 		#searchWrap.active #searchQuery{display:block;background:#fff;}
@@ -1200,7 +1174,7 @@ img{max-width:100%;height:auto;}
 .post.question form input[type="text"]{width:96%;}
 	.post.question form textarea{max-width:100%;resize: none;}
 	.post.question form input[type="email"]{width:86%;}
-	.post.question form input[type="submit"],.panel.signin form input[type="submit"]{background: url("http://essentialhospitals.org/wp-content/themes/EssentialHospitals/images/newsletter_btn.png") no-repeat #F05135 !important;border: 0 none;border-radius: 3px;float: left;height: 24px;margin-top:4px;text-indent: -5000px;width: 24px;behavior: url(http://essentialhospitals.org/wp-content/themes/EssentialHospitals/css/PIE.htc);}
+	.post.question form input[type="submit"]{background: url("http://essentialhospitals.org/wp-content/themes/EssentialHospitals/images/newsletter_btn.png") no-repeat #F05135 !important;border: 0 none;border-radius: 3px;float: left;height: 24px;margin-top:4px;text-indent: -5000px;width: 24px;behavior: url(http://essentialhospitals.org/wp-content/themes/EssentialHospitals/css/PIE.htc);}
 	.post.question .frm_submit{position: absolute;bottom:65px;right: -10px;}
 
 
@@ -1495,14 +1469,7 @@ p#login-lock {display: block;font-size: 14px;font-style: italic;margin: 20px 0 1
 	#breadcrumbs ul.menu li.current-menu-item{display:block !important;}
 
 
-/* Comment login */
-#respond{}
-	#respond form#loginform{display:block;float:left;width:100%;margin:15px 0;}
-	#respond form#loginform p.login-username{width:50%;float:left;}
-		#respond form#loginform p.login-username input[type="text"]{width:95%;}
-	#respond form#loginform p.login-password{width:50%;float:right;}
-		#respond form#loginform p.login-password input{width:95%;}
-	#respond form#loginform p.login-submit{float:right;}
+
 
 /* Lines/Rules */
 #contentWrap #contentSecondary #fader div.item .post.long.webinar{height:275px !important;margin:0 0 11px;}
@@ -1627,10 +1594,7 @@ input[disabled=disabled][type=submit] {opacity:.7;}
 
 
 .speciallittlesnowflakes{float: left; }
-#loginForm .div_text{width:210px;margin:0 auto 10px;float:none;display:block;}
-#loginForm label{width:210px;margin:0 auto 5px;float:none;}
-#loginForm input[type="text"], #loginForm input[type="password"]{width:210px;margin:0 auto;float:none;}
-#loginForm .button_div {display: block;margin: 15px auto 30px;width: 215px;}
+
 
 
 a:hover * {opacity: 0.7;}
@@ -1740,3 +1704,207 @@ div.mce-edit-area{border: 1px solid #d3d3d3 !important;}
 #mceu_14{display: none !important}
 
 .mce-statusbar{    visibility: hidden !important;}
+
+
+/******* TEST TEMP ***********/
+
+#registrationcontent #loginBoxPanel{display: inline;}
+
+
+/******* LOGIN FORMS ***********/
+
+
+/* HEADER LOGIN */ 
+#loginBoxPanel{height:auto; background:#565656;color:#fff;font-size:13px;padding:0;position:relative;text-align:left;width:100%;margin:auto;z-index:1;float:left;display:none; top:-8px;} 
+	#loginBoxPanel a{color:#fff;display:inline;}
+ 
+#loginForm{width:auto; float: right;padding: 20px 20px 0 0;}
+	#loginForm > div {clear: both;float: left;}
+	#loginForm legend{display:none;}
+	#loginForm label{display:none; color:#ccc;margin:0 0 5px 0;text-align:left; width:210px;margin:0 auto 5px;float:none;}
+	#loginForm p{color:#fff;margin:0 0 5px 0;text-align:left;}
+		#loginForm p.login-remember{float:left;}
+	
+	#loginForm input{padding:10px 10px 10px 40px;border-radius:2px;transition:0.2s all;-webkit-transition:0.2s all;-moz-transition:0.2s all;-ms-transition:0.2s all;-o-transition:0.2s all; border:none;float:left;margin:0 0 10px;}
+		#loginForm input:focus{  }
+		#loginForm input.username{background:url(../images/mail-icon.png) 10px 50% no-repeat #fff;}
+		#loginForm input.password{background:url(../images/pass-icon.png) 10px 50% no-repeat #fff;}
+
+		#loginForm input[type="text"], #loginForm input[type="password"]{width:210px;margin:0 auto;float:none;}
+		#loginForm input[type="submit"]{width:260px; margin:0 auto; float:none; display:block; padding:10px;  } 
+		#loginForm input[type="submit"]:hover{cursor:pointer; opacity: 0.9}
+
+	#loginForm .div_text{width:210px;margin:0 auto 10px; float:none; display:block;}
+	#loginForm .button_div {width:210px;margin:0 auto 10px; float:none; display:block;}
+
+	#loginForm .remember-reg{float:left;width:100%;margin:10px 0 0;font-size:11px;}
+	#loginForm .submit-reg{float:left;width:100%;margin:0px 0 5px;}
+		
+
+	#loginForm .pass-reg{float:left;width:100%;text-align:left;font-size:11px; position: relative; left: 38px;}
+	#loginForm .new-reg{float:left;width:100%; font-size:11px; padding:30px 10px 0 0; position: relative; left: 12px;}
+		#loginForm .new-reg a{vertical-align:middle;float:right;color:#fff;border:1px solid #fff;border-radius:2px;padding:8px;font-size:12px;font-weight:bold;margin:-10px 0 0;transition:0.2s all;-webkit-transition:0.2s all;-moz-transition:0.2s all;-ms-transition:0.2s all;-o-transition:0.2s all;}
+			#loginForm .new-reg a:hover{background:#fff;color:#565656;opacity:1;}
+
+	#loginForm #wpmem_msg{width: 219px;float: right;border: 1px solid #F05135;border-radius: 2px;background: #FCD7D1;padding: 10px 20px;color: #f05135;margin: 0  -13px 10px 0px ;}
+		#loginForm #wpmem_msg h2{display:none;}
+		#loginForm #wpmem_msg p{color: #f05135;}
+		#loginForm #wpmem_msg a{display:none;}
+ 
+ 
+ 
+/* SMALL LOGIN FORM MODULES */
+.panel.signin{background-color: #565656;}
+	.panel.signin h2 {color: white;}
+
+#loginSmall{width:auto; float: left; padding: 0px 0px 0 0;}
+	#loginSmall > div {clear: both;float: left;}
+	#loginSmall legend{display:none;}
+	#loginSmall label{display:none; color:#ccc;margin:0 0 5px 0;text-align:left; width:210px;margin:0 auto 5px;float:none;}
+	#loginSmall p{color:#fff;margin:0 0 5px 0;text-align:left;}
+		#loginSmall p.login-remember{float:left;}
+	
+	#loginSmall input{padding:10px 10px 10px 40px;border-radius:2px;transition:0.2s all;-webkit-transition:0.2s all;-moz-transition:0.2s all;-ms-transition:0.2s all;-o-transition:0.2s all; border:none;float:left;margin:0 0 10px;}
+		#loginSmall input:focus{  }
+		#loginSmall input.username{background:url(../images/mail-icon.png) 10px 50% no-repeat #fff;}
+		#loginSmall input.password{background:url(../images/pass-icon.png) 10px 50% no-repeat #fff;}
+
+		#loginSmall input[type="text"], #loginSmall input[type="password"]{width:210px;margin:0 auto;float:none;}
+		#loginSmall input[type="submit"]{width:100%; margin:0 auto; float:none; display:block; padding:10px;  } 
+		#loginSmall input[type="submit"]:hover{cursor:pointer; opacity: 0.9}
+
+	#loginSmall .div_text{width:195px;margin: 0px 0px 10px 0px; float:none; display:block;}
+
+	#loginSmall .button_div {width:245px;margin:0px; float:none; display:block;}
+
+	#loginSmall .submit-reg{float:left;width:100%;margin:0px;}
+	#loginSmall .remember-reg{float:left;width:100%;margin:10px 0 0;font-size:11px;}
+	
+		
+
+	#loginSmall .pass-reg{float:left;width:100%;text-align:left;font-size:11px; position: relative; left: 0px; color: white; margin: 10px 0px 0px 0px;}
+		#loginSmall .pass-reg a {color:#fff;color: #fff; opacity:1;}
+
+	#loginSmall .new-reg{float:left;width:100%; font-size:11px; padding:30px 0px 0 0; position: relative; right: 25px; color: #fff}
+		#loginSmall .new-reg a{vertical-align:middle;float:right;color:#fff;border:1px solid #fff;border-radius:2px;padding:8px;font-size:12px;font-weight:bold;margin:-10px 0 0;transition:0.2s all;-webkit-transition:0.2s all;-moz-transition:0.2s all;-ms-transition:0.2s all;-o-transition:0.2s all;}
+			#loginSmall .new-reg a:hover{background:#fff;color:#565656;opacity:1;}
+
+	#loginSmall #wpmem_msg-sm{width: 203px;float: leftt;border: 1px solid #F05135;border-radius: 2px;background: #FCD7D1;padding: 10px 20px;color: #f05135;margin: 0  -13px 10px 0px ;}
+		#loginSmall #wpmem_msg-sm h2{display:none;}
+		#loginSmall #wpmem_msg-sm p{color: #f05135;}
+		#loginSmall #wpmem_msg-sm a{display:none;}
+ 
+ 
+.wpmem_msg span.error {background:#ffc5c5;padding: 10px 20px;border:1px solid #da2b2b;color:#da2b2b;display:block;}
+.wpmem_msg span.success {background:#c5ffc9;padding: 10px 20px;border:1px solid #1ea53e;color:#1ea53e;display:block;}
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+#my-profile-wpm form label[for="username"], #my-profile-wpm form p.noinput{display:none;}
+
+
+/* Comment login */
+#respond{}
+	#respond form#loginform{display:block;float:left;width:100%;margin:15px 0;}
+	#respond form#loginform p.login-username{width:50%;float:left;}
+		#respond form#loginform p.login-username input[type="text"]{width:95%;}
+	#respond form#loginform p.login-password{width:50%;float:right;}
+		#respond form#loginform p.login-password input{width:95%;}
+	#respond form#loginform p.login-submit{float:right;}
+
+
+
+/* Registration */
+#wpmem_reg form div{position:relative;width:96%;}
+#wpmem_reg form label{float:left;width:100%;text-align:left;padding:8px 2% 10px 0;}
+#wpmem_reg form div input{width:100%;}
+	#wpmem_reg form div input.failed, #newMem .fail{border:2px solid #F05135;}
+	#wpmem_reg form div .failAlert{position: absolute;top: 0;left:-155px;background: #f05135;border-radius: 2px;color: #fff;width: 120px;padding: 8px 10px;white-space:normal;}
+		#wpmem_reg form div .failAlert:after{height:15px;width:8px;content:'';background:url(../images/failCaret.png) no-repeat;position:absolute;top:7px;right:-7px;}
+
+#wpmem_reg input#tos{margin: 0px 0.5ex 3px;width: auto !important;float: left;display: inline-block;vertical-align: top;}
+label[for="aeh_visibility"]{float:left !important;width:auto !important;}
+#wpmem_reg form div.div_checkbox{float:left !important;width:auto !important;white-space:nowrap;}
+	input#aeh_visibility {margin: 9px 0;}
+	#wpmem_reg .button_div input[type="submit"] {float: right;width: auto !important;}
+#loginregister #memberReg{width:100%;}
+
+.div_checkbox.failed{padding:10px;border:2px solid #F05135;}
+
+#newMem table.onehalf{width:46%;margin:0 2%;background:#F0F0F0;}
+#newMem input[type="submit"]{background: none repeat scroll 0 0 #F05135;border-radius: 3px;float:right;color:#fff;border:none;padding: 5px 10px;margin: 10px 3%;}
+
+#wannalogin{float:left;width:100%;text-align:left;padding:25px 0 0;margin:25px 0 0;border-top:1px solid #ccc;}
+	#wannalogin .fugghedabatit{color:#F05135; text-align: center; border:1px solid #F05135;border-radius:2px;padding:5px 10px;margin: 10px 0px 0px 0px;display:block;width:100px;transition:0.2s all;-webkit-transition:0.2s all;-moz-transition:0.2s all;-ms-transition:0.2s all;-o-transition:0.2s all;}
+		#wannalogin .fugghedabatit:hover{color:#fff;border:1px solid #F05135;background:#f05135;cursor:pointer;}
+
+#loginregister #memberReg #wpmem_reg label[for="employer"], #loginregister #memberReg #wpmem_reg label[for="job_title"], #loginregister #memberReg #wpmem_reg label[for="job_function"], #loginregister #memberReg #wpmem_reg label[for="linkedin"], #loginregister #memberReg #wpmem_reg label[for="twitter"], #loginregister #memberReg #wpmem_reg label[for="facebook"], #loginregister #memberReg #wpmem_reg input[id="employer"], #loginregister #memberReg #wpmem_reg input[id="job_title"], #loginregister #memberReg #wpmem_reg select[id="job_function"], #loginregister #memberReg #wpmem_reg input[id="linkedin"], #loginregister #memberReg #wpmem_reg input[id="twitter"], #loginregister #memberReg #wpmem_reg input[id="facebook"],#loginregister #memberReg #wpmem_reg label.textarea,#loginregister #memberReg #wpmem_reg .div_textarea,
+	#loginregister #memberReg #wpmem_reg label[for="designation"], #loginregister #memberReg #wpmem_reg input[id="designation"],
+	#loginregister #memberReg #wpmem_reg label[for="street_address"], #loginregister #memberReg #wpmem_reg input[id="street_address"],
+	#loginregister #memberReg #wpmem_reg label[for="city"], #loginregister #memberReg #wpmem_reg input[id="city"],
+	#loginregister #memberReg #wpmem_reg label[for="state"], #loginregister #memberReg #wpmem_reg select[id="state"],
+	#loginregister #memberReg #wpmem_reg label[for="zip_code"], #loginregister #memberReg #wpmem_reg input[id="zip_code"],
+	#loginregister #memberReg #wpmem_reg label[for="country"], #loginregister #memberReg #wpmem_reg input[id="country"],
+	#loginregister #memberReg #wpmem_reg label[for="phone"], #loginregister #memberReg #wpmem_reg input[id="phone"],
+	#loginregister #memberReg #wpmem_reg label[for="fax"], #loginregister #memberReg #wpmem_reg input[id="fax"],
+	#loginregister #memberReg #wpmem_reg label[for="mobile"], #loginregister #memberReg #wpmem_reg input[id="mobile"],
+	#loginregister #memberReg #wpmem_reg label[for="assistant_name"], #loginregister #memberReg #wpmem_reg input[id="assistant_name"],
+	#loginregister #memberReg #wpmem_reg label[for="assistant_email"], #loginregister #memberReg #wpmem_reg input[id="assistant_email"],
+	#loginregister #memberReg #wpmem_reg label[for="assistant_phone"], #loginregister #memberReg #wpmem_reg input[id="assistant_phone"],
+	#loginregister #memberReg #wpmem_reg input#job_function,
+	#loginregister #memberReg #wpmem_reg label[for="suffix"], #loginregister #memberReg #wpmem_reg select#suffix,
+	#loginregister #memberReg #wpmem_reg label[for="title"], #loginregister #memberReg #wpmem_reg input#title,
+	#loginregister #memberReg #wpmem_reg label[for="hospital_name"], #loginregister #memberReg #wpmem_reg input#hospital_name,
+	#loginregister #memberReg #wpmem_reg label[for="middle_name"], #loginregister #memberReg #wpmem_reg input#middle_name,
+	#loginregister #memberReg #wpmem_reg label[for="username"], #loginregister #memberReg #wpmem_reg input#username,
+	#loginregister #memberReg #wpmem_reg label[for="hospital_name"], #loginregister #memberReg #wpmem_reg select#hospital_name,
+	#loginregister #memberReg #wpmem_reg label[for="CO_ID"], #loginregister #memberReg #wpmem_reg select#CO_ID,
+	#loginregister #memberReg #wpmem_reg label[for="COMPANY_SORT"], #loginregister #memberReg #wpmem_reg select#COMPANY_SORT,
+	#myprofilecontent #my-profile-wpm select#CO_ID, #myprofilecontent #my-profile-wpm label[for="CO_ID"],
+	#myprofilecontent #my-profile-wpm select#COMPANY_SORT, #myprofilecontent #my-profile-wpm label[for="COMPANY_SORT"],
+	#loginregister .loginreghidden
+	{display:none;}
+
+
+	#wpmem_reg form div input{}
+#wpmem_reg form label{float: left;width: 23%;text-align: right;padding: 8px 2% 0 0;clear:left;}
+#profile-staff{display: none;}
+input.buttons{background:#2E2E2E;border: medium none;color: #FFFFFF;padding: 5px 10px;text-transform: uppercase;float:right;}
+input.buttons[type="submit"]{border-radius:3px;background:#f05135; font-weight: bold;}
+.req-text{color:red;font-style: italic;}
+#loginregister{}
+#loginregister legend {font-size: 15px;margin: 0 0 10px;}
+#loginregister #memberLogin{}
+	#memberLogin .gutter{padding:0 0;}
+	#memberLogin #wpmem_login{width:220px;margin:0 auto;}
+	#memberLogin .button_div{margin:0 0 5px;}
+
+#loginregister #memberReg{display:block;}
+	#memberReg .gutter{padding:0 0;}
+	#memberReg #wpmem_login{display:none;}
+	#memberReg #wpmem_reg {margin:0 auto 0;width: 430px;}
+		#memberReg #wpmem_reg .button_div{margin:15px 0 5px;}
+	p#regTrigger {background:#2E2E2E;color: #FFFFFF;margin: 0 auto 20px;padding: 10px 20px;text-align: center;width: 200px;}
+		p#regTrigger:hover{cursor:pointer;}
+
+
+
+
+
+/* ----- Additional ----- */
+#memReg #wpmem_login, /*input[name="aeh_visibility"], label[for="aeh_visibility"],*/ input.buttons[name="reset"]{display:none;}
+
+
+
+
+

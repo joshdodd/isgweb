@@ -3,24 +3,34 @@
 <?php $speakerIMG = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); 
 
 $pageTheme = get_post_type();
+ if( is_tax() ) {
+    global $wp_query;
+    $term = $wp_query->get_queried_object();
+    $pageTheme = $term->taxonomy;
+  
+}
 
 
-if($pageTheme == 'policy'){
+if($pageTheme == 'policytopics'){
 			$fPID = 62;
 			$speakerIMG  = wp_get_attachment_url( get_post_thumbnail_id(62) );
 			$pageTitle = "Action";
-		}elseif($pageTheme == 'quality'){
+			$pageTheme = 'policy';
+		}elseif($pageTheme == 'qualitytopics'){
 			$fPID = 64;
 			$speakerIMG = wp_get_attachment_url( get_post_thumbnail_id(64) );
-		$pageTitle = "Quality";
-		}elseif($pageTheme == 'institute'){
+			$pageTitle = "Quality";
+			$pageTheme = 'quality';
+		}elseif($pageTheme == 'institutetopics'){
 			$fPID = 621;
 			$speakerIMG = wp_get_attachment_url( get_post_thumbnail_id(621) );
 			$pageTitle = "Essential Hospitals Institute" ;
-		}elseif($pageTheme == 'education'){
+			$pageTheme = 'institute';
+		}elseif($pageTheme == 'educationtopics'){
 			$fPID = 472;
 			$speakerIMG = wp_get_attachment_url( get_post_thumbnail_id(472) );
 			$pageTitle = "Education" ;
+			$pageTheme = 'education';
 		}else{
 			$fPID = 645;
 			$rand = rand(1,9);
@@ -39,7 +49,7 @@ if($pageTheme == 'policy'){
 ?>
 
 
-<div id="featured-img" class="archive tag <?php echo $pageTheme; ?>" style="background-image:url(<?php echo $speakerIMG; ?>);">
+<div id="featured-img" class="archive tag <?php echo $pageTheme; ?> " style="background-image:url(<?php echo $speakerIMG; ?>);">
 	<div class="container">
 		<div id="featured-intro">
 			<h3><span><?php echo $pageTitle; ?> </span> <br /><?php $tax = $wp_query->get_queried_object();echo $tax->name; ?> </h3>

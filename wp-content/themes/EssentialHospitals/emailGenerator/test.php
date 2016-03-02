@@ -92,7 +92,7 @@
 				array(
 					'taxonomy' => 'series',
 					'field'    => 'slug',
-					'terms'    => array('analysis','newsline','podcasts'),
+					'terms'    => array('analysis','alerts','updates','newsline','podcasts'),
 				),
 				array(
 					'taxonomy' => 'category',
@@ -251,7 +251,7 @@
 				array(
 					'taxonomy' => 'series',
 					'field'    => 'slug',
-					'terms'    => array('analysis','newsline','podcasts'),
+					'terms'    => array('analysis','alerts','updates','newsline','podcasts'),
 				),
 				array(
 					'taxonomy' => 'category',

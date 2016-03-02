@@ -32,10 +32,10 @@ if ($test){
 	define ("SP_GET_TITLES",     "test_GetTitles");					// cron to get user TITLES and set serialized value in WP Options table
 	define ("SP_WEB_INTERESTS",  "test_GetWebInterests");			// cron to get WEB_INTEREST and set serialized value in WP Options table
 	define ("SP_COMPANY_LIST",  "test_GetCompanyList");				// cron to get COMPANY and HQ address info and set serialized value in WP Options table
-	define ("IMIS_SOAP_URL",'http://isgweb.naph.org/ibridge_test/Account.asmx?wsdl'); 								// URL for test SOAP Client comms with iMIS
-	define ("IMIS_POST_URL",'http://isgweb.naph.org/ibridge_test/DataAccess.asmx/ExecuteDatasetStoredProcedure');	// URL for test POST comms (read) with iMIS
-	define ("SP_POST_UPDATE_URL", 'http://isgweb.naph.org/ibridge_test/DataAccess.asmx/ExecuteStoredProcedure');	// URL for POST execute SP on Account Updates
-	define ("SOAP_DEMOG_UPDATE_URL",'http://isgweb.naph.org/ibridge_test/Demographics.asmx?wsdl');					// URL for POST execute SP on Demographic Updates
+	define ("IMIS_SOAP_URL",'http://isgweb.essentialhospitals.org/ibridge_test/Account.asmx?wsdl'); 								// URL for test SOAP Client comms with iMIS
+	define ("IMIS_POST_URL",'http://isgweb.essentialhospitals.org/ibridge_test/DataAccess.asmx/ExecuteDatasetStoredProcedure');	// URL for test POST comms (read) with iMIS
+	define ("SP_POST_UPDATE_URL", 'http://isgweb.essentialhospitals.org/ibridge_test/DataAccess.asmx/ExecuteStoredProcedure');	// URL for POST execute SP on Account Updates
+	define ("SOAP_DEMOG_UPDATE_URL",'http://isgweb.essentialhospitals.org/ibridge_test/Demographics.asmx?wsdl');					// URL for POST execute SP on Demographic Updates
 }else{
 	define ("SP_IMPORT_USERS",   "importUsers");					// main import users cron job
 	define ("SP_GET_IMIS_USER",  "GetImisUser");					// retrieve info on one iMIS user
@@ -46,11 +46,11 @@ if ($test){
 	define ("SP_WEB_INTERESTS",  "GetWebInterests");				// cron to get WEB_INTEREST and set serialized value in WP Options table
 	define ("SP_COMPANY_LIST",  "GetCompanyList");					// cron to get COMPANY and HQ address info and set serialized value in WP Options table
 	define ("SP_EMAIL_LIST",  "GetEmailList");				     	// cron to get verified email domains and update wp_aeh_email table
-	define ("IMIS_SOAP_URL",'http://isgweb.naph.org/ibridge/Account.asmx?wsdl'); 									// URL for SOAP Client comms with iMIS
-	define ("IMIS_POST_URL",'http://isgweb.naph.org/ibridge/DataAccess.asmx/ExecuteDatasetStoredProcedure');		// URL for POST comms (read) with iMIS
-	define ("SP_POST_UPDATE_URL", 'http://isgweb.naph.org/ibridge/DataAccess.asmx/ExecuteStoredProcedure');			// URL for POST execute SP on Account Updates
-	define ("SOAP_DEMOG_UPDATE_URL",'http://isgweb.naph.org/ibridge/Demographics.asmx?wsdl');	
-	define ("AUTHENTICATE_URL",'http://isgweb.naph.org/ibridge/Authentication.asmx?wsdl');					// URL for POST execute SP on Demographic Updates
+	define ("IMIS_SOAP_URL",'http://isgweb.essentialhospitals.org/ibridge/Account.asmx?wsdl'); 									// URL for SOAP Client comms with iMIS
+	define ("IMIS_POST_URL",'http://isgweb.essentialhospitals.org/ibridge/DataAccess.asmx/ExecuteDatasetStoredProcedure');		// URL for POST comms (read) with iMIS
+	define ("SP_POST_UPDATE_URL", 'http://isgweb.essentialhospitals.org/ibridge/DataAccess.asmx/ExecuteStoredProcedure');			// URL for POST execute SP on Account Updates
+	define ("SOAP_DEMOG_UPDATE_URL",'http://isgweb.essentialhospitals.org/ibridge/Demographics.asmx?wsdl');	
+	define ("AUTHENTICATE_URL",'http://isgweb.essentialhospitals.org/ibridge/Authentication.asmx?wsdl');					// URL for POST execute SP on Demographic Updates
 }
 
 /*
@@ -624,7 +624,7 @@ register_sidebar( array(
   remove_action('wp_head','adjacent_posts_rel_link_wp_head');
   remove_action('wp_head', 'wp_generator'); // remove WP version from header
   remove_action('wp_head','wp_shortlink_wp_head');
-  remove_filter( 'the_content', 'capital_P_dangit' );  
+  remove_filter( 'the_content', 'capital_P_dangit' ); // Get outta my Wordpress codez dangit!
   remove_filter( 'the_title', 'capital_P_dangit' );
   remove_filter( 'comment_text', 'capital_P_dangit' );
 
@@ -2549,8 +2549,52 @@ function undo_create_term ($term_id, $tt_id, $taxonomy) {
         }
     }
 }
+
+//add_filter( 'wp_tag_cloud', 'my_admin_tag_cloud_args' );
+function my_admin_tag_cloud_args( $args ) {
  
+	$args = array(
+		'smallest' => 9, 'largest' => 9, 'unit' => 'pt', 'number' => 400,
+		'format' => 'flat', 'separator' => "\n", 'orderby' => 'name', 'order' => 'ASC',
+		'exclude' => '', 'include' => '', 'link' => 'view', 'taxonomy' => 'post_tag', 'echo' => true
+	);
+	$args = wp_parse_args( $args, $defaults );
+	$tags = get_terms( $args['taxonomy'], array_merge( $args, array( 'orderby' => 'count', 'order' => 'DESC' ) ) ); // Always query top tags
+
+	if ( empty( $tags ) )
+		return;
+
+	foreach ( $tags as $key => $tag ) {
+		if ( 'edit' == $args['link'] )
+			$link = get_edit_tag_link( $tag->term_id, $args['taxonomy'] );
+		else
+			$link = get_term_link( intval($tag->term_id), $args['taxonomy'] );
+		if ( is_wp_error( $link ) )
+			return false;
+
+		$tags[ $key ]->link = $link;
+		$tags[ $key ]->id = $tag->term_id;
+	}
+
+	$return = wp_generate_tag_cloud( $tags, $args ); // Here's where those top tags get sorted according to $args
+
+	$return = apply_filters( 'my_tag_cloud', $return, $args );
+
+	if ( 'array' == $args['format'] || empty($args['echo']) )
+		return $return;
+
+	echo $return;
+
  
+
+
+
+
+}
+
+
+
+
 
 //EVENTS AND PRESETNATIONS CLASSES
 require_once('functions/class-events.php');
@@ -2657,15 +2701,23 @@ var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
 <?php
 }
 
+
+
 add_action( 'wp_ajax_login_authenticate', 'login_authenticate' );
 add_action( 'wp_ajax_nopriv_login_authenticate', 'login_authenticate' );
+
+add_action( 'wp_ajax_login_user', 'login_user' );
+add_action( 'wp_ajax_nopriv_login_user', 'login_user' );
+
+
+
 
 function login_authenticate(){
 	
 	$email = $_POST['email'];
 	$password = $_POST['password'];
 
-	$url = 'http://isgweb.naph.org/ibridge/Authentication.asmx/AuthenticateUser';
+	$url = 'http://isgweb.essentialhospitals.org/ibridge/Authentication.asmx/AuthenticateUser';
 	$result = wp_remote_post( $url, array(
 		'method' => 'POST',
 		'timeout' => 45,
@@ -2708,8 +2760,7 @@ function login_authenticate(){
 		//Create DOM element to traverse
 		$dom = dom_import_simplexml($xml);
 		if ($dom === false)return false;
-
-		//print_r($dom);
+ 
 	 	 
 		//Get User Data!
 	 	$user = $dom->getElementsByTagName('User'); 
@@ -2723,14 +2774,25 @@ function login_authenticate(){
 	 	}
 	 	else{
 	 		//Success 
+
 	 		$token = $user->item(0)->getAttribute('TOKEN');
 	 		$email = $user->item(0)->getAttribute('EMAIL');
+      $imisid = $user->item(0)->getAttribute('ID');
+      $memtype = $user->item(0)->getAttribute('MEMBER_TYPE');
+
+      //return values
+      echo $email.",".$token.",".$imisid.",".$memtype;
+
+      die();
+     
+
+      //echo $email . " -- Success --" . $token;;
 
 	 		//login_wp_user("joshdodssddd@mailer.com");
 
-	 		login_wp_user($email);
-	 		//GRAB MEMBER TYPE AND UPDATE USER META for MEM TYPE (and others?)
+	 		
  
+	 		//GRAB MEMBER TYPE AND UPDATE USER META for MEM TYPE (and others?)
 
 	 		//print_r($user->item(0)->getAttribute('ID'));
 	 		//print_r($user->item(0)->getAttribute('EMAIL'));
@@ -2740,115 +2802,6 @@ function login_authenticate(){
 	 	}
  
 
-	 	//SAVE TO ARRAY AND RETURN
-
-
-
- 
-	}
-	else{
-		return false;
-	}
-
-
-	//***************************************************************************************************
-
- 
-}
-
-
-function login_wp_user($email){
-
-	$user = get_user_by('email', $email );
- 
-	// Redirect URL //
-	if ( $user != '')
-	{
-	    wp_clear_auth_cookie();
-	    wp_set_current_user ( $user->ID );
-	    wp_set_auth_cookie  ( $user->ID );
-        do_action( 'wp_login', $user_login, $user );
-
-
-
-	    // $redirect_to = user_admin_url();
-	    // wp_safe_redirect( $redirect_to );
-	    exit();
-	}
-
-	else{
-		//User Doesn't exist, create user and login
-		if( null == username_exists( $email_address ) ) {
-			print_r("OK");
-			$password = wp_generate_password( 12, true );
-			$user_id = wp_create_user($email, $password, $email);
-			login_wp_user($email);
-		}
-	}
- 
-}
-
- 
-
-
-
-
-
-
-//AUTHENTICATE TEST//////////
-
-function authenticate_user($email, $password){
-
-	$url = 'http://isgweb.naph.org/ibridge/Authentication.asmx/AuthenticateUser';
-	$result = wp_remote_post( $url, array(
-		'method' => 'POST',
-		'timeout' => 45,
-		'redirection' => 5,
-		'httpversion' => '1.0',
-		'blocking' => true,
-		'headers' => array(),
-		'body' => array('securityPassword'=> '27D5F4B5-57B2-4A67-BC82-AA2E1756DED3','username'=> $email,'password' => $password),
-		'cookies' => array()
-	    )
-	);
-
-	$body  = wp_remote_retrieve_body($result);
-	//echo $body; 
- 
-	//print_r($result);
-	if ($result['response']['message'] == 'OK'){  //if no status then an error occurred.
- 
- 		//Manipulate iBridge XML to get what we want into a string	
- 		$body = preg_replace('/<string[^>]+\>/i', "", $body);
- 		$body = str_replace('</string>', '', $body);
- 		$body = substr($body, 85);
- 
- 		//Turn on XML Error Reporting
- 		libxml_use_internal_errors(true);
-
- 		//load in string to conver to  simpleXML
- 		$xml = simplexml_load_string(html_entity_decode($body),'SimpleXMLElement', LIBXML_NOCDATA);
- 		if ($xml === false) {
-		    echo "Failed loading XML\n";
-		    foreach(libxml_get_errors() as $error) {
-		        echo "\t", $error->message;
-		    }
-		}
-
-		//Create DOM element to traverse
-		$dom = dom_import_simplexml($xml);
-		if ($dom === false)return false;
-	 	 
-		//Get User Date!
-	 	$user = $dom->getElementsByTagName('User'); 
-
-	 	print_r($user->item(0)->getAttribute('ID'));
-	 	print_r($user->item(0)->getAttribute('EMAIL'));
-	 	print_r($user->item(0)->getAttribute('TOKEN'));
-	 	//.....
-
-	 	//SAVE TO ARRAY AND RETURN
-
 
 
  
@@ -2862,6 +2815,97 @@ function authenticate_user($email, $password){
 
  
 }
+
+
+function login_user(){
+
+  $email = $_POST['email'];
+  $token = $_POST['token'];
+  $memtype= $_POST['memtype'];
+  $imisis= $_POST['imisid'];
+  
+  $user = get_user_by('email', $email);
+  $staff = 0;
+
+  if($memtype == 'STAFF' || $memtype == "MIND" ) {
+    $memtype = 'hospital';
+    $staff = 1;
+  }
+  else{
+    $memtype = 'public';
+  }
+ 
+   
+  if ( $user != '')
+  {
+      //clear any existing sessions and setup new session
+      wp_clear_auth_cookie();
+      wp_set_current_user ( $user->ID );
+      wp_set_auth_cookie  ( $user->ID );
+
+      //update user meta with essential iMIS info and Token
+      update_user_meta($user->ID, 'isg_token', $token);
+      update_user_meta($user->ID, 'aeh_member_type', $memtype);
+      update_user_meta($user->ID, 'aeh_imis_id', $imisid);
+      if($staff){
+        update_user_meta($user->ID, 'aeh_staff', 'Y');
+      }
+
+      //login user
+      do_action( 'wp_login', $user_login, $user );
+ 
+      die();
+  }
+
+  else{
+    //User Doesn't exist, create user and login
+    if( null == username_exists( $email_address ) ) {
+      print_r("OK");
+      $password = wp_generate_password( 12, true );
+      $user_id = wp_create_user($email, $password, $email);
+      login_wp_user($email);
+    }
+  }
+ 
+}
+ 
+
+//Delete user session on logout;
+function DeleteISGsession(){
+
+  $userinfo = wp_get_current_user();
+  $user_id = $userinfo->ID;
+
+  //get current token value
+  $token = get_user_meta($user_id , 'isg_token', true );
+
+  //clear wp db token value
+  update_user_meta( $user_id, 'isg_token', '');
+
+
+  //DELETE ISG SESSION -- This can be removed if causing issues...
+  $url = 'http://isgweb.essentialhospitals.org/ibridge/Authentication.asmx/DeleteUserSession';
+  $result = wp_remote_post( $url, array(
+    'method' => 'POST',
+    'timeout' => 45,
+    'redirection' => 5,
+    'httpversion' => '1.0',
+    'blocking' => true,
+    'headers' => array(),
+    'body' => array('securityPassword'=> '27D5F4B5-57B2-4A67-BC82-AA2E1756DED3','token'=> $token),
+    'cookies' => array()
+      )
+  );
+
+  //$body  = wp_remote_retrieve_body($result);
+  //echo $body; 
+  //print_r($result);
+
+}
+ 
+ 
+add_action('wp_logout', 'DeleteISGsession', 10);
+ 
 
 
 

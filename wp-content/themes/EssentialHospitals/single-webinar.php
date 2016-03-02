@@ -127,6 +127,7 @@
 											echo "</p>";
 											echo "<h4>You must be an association member to access this webinar.</h4>";
 										}else{  //USER IS AN ASSOC MEMEBER!
+											
 											//IF NOT SIGNED UP AND BEFORE  Start DATE
 											if($checker == false && $today < $webDate){
 												echo "<p>";
@@ -135,9 +136,7 @@
 												echo '<span class="education reserve button single-webinar"><a href="'.get_field('registration_link').'">Reserve Your Spot</a></span>';
 											}elseif($checker == false && $today > $webDate){
 												//IF NOT SIGNED UP AND AFTER START DATE
-												echo "<p>";
-												the_field('teaser');
-												echo "</p>";
+												the_content();
 									 
 											}else{  //USER ALREADY REGISTERED
 												the_content();
@@ -155,9 +154,7 @@
 											echo '<span class="education reserve button single-webinar"><a href="'.get_field('registration_link').'">Reserve Your Spot</a></span>';
 										}elseif($checker == false && $today > $webDate){
 											//IF NOT SIGNED UP AND AFTER START DATE
-											echo "<p>";
-											the_field('teaser');
-											echo "</p>";
+											the_content();
 										}else{  //USER ALREADY REGISTERED
 											the_content();
 											

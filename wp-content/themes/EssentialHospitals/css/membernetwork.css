@@ -75,6 +75,8 @@
 	.group-resources, .group-details, .group-members{float:left;}
 	.group-details{width:540px;padding:0 6px 0 8px;border-right:1px solid #e9e9e9;}
 		.group-details .gutter{padding:50px;}
+
+		
 	.group-members{width:265px;padding:0 6px 0 8px;border-left:1px solid #e1e1e1;border-right:1px solid #e9e9e9;}
 	.group-resources{width:260px;padding:0 0 0 10px;border-left:1px solid #e1e1e1;}
 
@@ -343,54 +345,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 		span#memEmail,span#memBio {display: block;font-size: 11px;line-height: 11px;margin: -12px 0 10px;}
 
 
-		#loginregister #memberReg #wpmem_reg label[for="employer"], #loginregister #memberReg #wpmem_reg label[for="job_title"], #loginregister #memberReg #wpmem_reg label[for="job_function"], #loginregister #memberReg #wpmem_reg label[for="linkedin"], #loginregister #memberReg #wpmem_reg label[for="twitter"], #loginregister #memberReg #wpmem_reg label[for="facebook"], #loginregister #memberReg #wpmem_reg input[id="employer"], #loginregister #memberReg #wpmem_reg input[id="job_title"], #loginregister #memberReg #wpmem_reg select[id="job_function"], #loginregister #memberReg #wpmem_reg input[id="linkedin"], #loginregister #memberReg #wpmem_reg input[id="twitter"], #loginregister #memberReg #wpmem_reg input[id="facebook"],#loginregister #memberReg #wpmem_reg label.textarea,#loginregister #memberReg #wpmem_reg .div_textarea,
-			#loginregister #memberReg #wpmem_reg label[for="designation"], #loginregister #memberReg #wpmem_reg input[id="designation"],
-			#loginregister #memberReg #wpmem_reg label[for="street_address"], #loginregister #memberReg #wpmem_reg input[id="street_address"],
-			#loginregister #memberReg #wpmem_reg label[for="city"], #loginregister #memberReg #wpmem_reg input[id="city"],
-			#loginregister #memberReg #wpmem_reg label[for="state"], #loginregister #memberReg #wpmem_reg select[id="state"],
-			#loginregister #memberReg #wpmem_reg label[for="zip_code"], #loginregister #memberReg #wpmem_reg input[id="zip_code"],
-			#loginregister #memberReg #wpmem_reg label[for="country"], #loginregister #memberReg #wpmem_reg input[id="country"],
-			#loginregister #memberReg #wpmem_reg label[for="phone"], #loginregister #memberReg #wpmem_reg input[id="phone"],
-			#loginregister #memberReg #wpmem_reg label[for="fax"], #loginregister #memberReg #wpmem_reg input[id="fax"],
-			#loginregister #memberReg #wpmem_reg label[for="mobile"], #loginregister #memberReg #wpmem_reg input[id="mobile"],
-			#loginregister #memberReg #wpmem_reg label[for="assistant_name"], #loginregister #memberReg #wpmem_reg input[id="assistant_name"],
-			#loginregister #memberReg #wpmem_reg label[for="assistant_email"], #loginregister #memberReg #wpmem_reg input[id="assistant_email"],
-			#loginregister #memberReg #wpmem_reg label[for="assistant_phone"], #loginregister #memberReg #wpmem_reg input[id="assistant_phone"],
-			#loginregister #memberReg #wpmem_reg input#job_function,
-			#loginregister #memberReg #wpmem_reg label[for="suffix"], #loginregister #memberReg #wpmem_reg select#suffix,
-			#loginregister #memberReg #wpmem_reg label[for="title"], #loginregister #memberReg #wpmem_reg input#title,
-			#loginregister #memberReg #wpmem_reg label[for="hospital_name"], #loginregister #memberReg #wpmem_reg input#hospital_name,
-			#loginregister #memberReg #wpmem_reg label[for="middle_name"], #loginregister #memberReg #wpmem_reg input#middle_name,
-			#loginregister #memberReg #wpmem_reg label[for="username"], #loginregister #memberReg #wpmem_reg input#username,
-			#loginregister #memberReg #wpmem_reg label[for="hospital_name"], #loginregister #memberReg #wpmem_reg select#hospital_name,
-			#loginregister #memberReg #wpmem_reg label[for="CO_ID"], #loginregister #memberReg #wpmem_reg select#CO_ID,
-			#loginregister #memberReg #wpmem_reg label[for="COMPANY_SORT"], #loginregister #memberReg #wpmem_reg select#COMPANY_SORT,
-			#myprofilecontent #my-profile-wpm select#CO_ID, #myprofilecontent #my-profile-wpm label[for="CO_ID"],
-			#myprofilecontent #my-profile-wpm select#COMPANY_SORT, #myprofilecontent #my-profile-wpm label[for="COMPANY_SORT"],
-			#loginregister .loginreghidden
-			{display:none;}
 
-
-			#wpmem_reg form div input{}
-		#wpmem_reg form label{float: left;width: 23%;text-align: right;padding: 8px 2% 0 0;clear:left;}
-		#profile-staff{display: none;}
-	input.buttons{background:#2E2E2E;border: medium none;color: #FFFFFF;padding: 5px 10px;text-transform: uppercase;float:right;}
-	input.buttons[type="submit"]{border-radius:3px;background:#f05135;}
-	.req-text{color:red;font-style: italic;}
-	#loginregister{}
-		#loginregister legend {font-size: 15px;margin: 0 0 10px;}
-		#loginregister #memberLogin{}
-			#memberLogin .gutter{padding:0 0;}
-			#memberLogin #wpmem_login{width:220px;margin:0 auto;}
-			#memberLogin .button_div{margin:0 0 5px;}
-
-		#loginregister #memberReg{display:block;}
-			#memberReg .gutter{padding:0 0;}
-			#memberReg #wpmem_login{display:none;}
-			#memberReg #wpmem_reg {margin:0 auto 0;width: 430px;}
-				#memberReg #wpmem_reg .button_div{margin:15px 0 5px;}
-			p#regTrigger {background:#2E2E2E;color: #FFFFFF;margin: 0 auto 20px;padding: 10px 20px;text-align: center;width: 200px;}
-				p#regTrigger:hover{cursor:pointer;}
 
 	#pm-notify, #alertCont{border-top: 1px solid #d3d3d3;border-bottom: 1px solid #d3d3d3;margin: 0px 0 6px 0;padding: 3px 0 2px 0;float: left;width: 100%;color: #f05033 !important;}
 		#pm-notify, #alertCont .gutter{background: #fdedea !important;padding: 6px 12px;}
@@ -427,8 +382,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 	.guestblog #formcont .form-field{margin:0 0 12px;}
 
 
-/* ----- Additional ----- */
-#memReg #wpmem_login, /*input[name="aeh_visibility"], label[for="aeh_visibility"],*/ input.buttons[name="reset"]{display:none;}
 
 body.search{left:0;padding:0;margin:0;}
 #siteWrap{position:relative;transition:.3s all;-webkit-transition:.3s all;-moz-transition:.3s all;-ms-transition:.3s all;-o-transition:.3s all;z-index:2;background:#fff;}
@@ -812,60 +765,8 @@ nav.membernav.hospital li.members-only{display:block;}
 
 
 
-/* Registration and Login */
-#loginBoxPanel{height:auto;}
-#loginForm{width:auto;}
-	#loginForm label{display:none;}
-	#loginForm input{padding:10px 10px 10px 40px;border-radius:2px;transition:0.2s all;-webkit-transition:0.2s all;-moz-transition:0.2s all;-ms-transition:0.2s all;-o-transition:0.2s all;}
-		#loginForm input:focus{box-shadow:inset 0 0 10px rgba(0,0,0,0.5);}
-		#loginForm input.username{background:url(../images/mail-icon.png) 10px 50% no-repeat #fff;}
-		#loginForm input.password{background:url(../images/pass-icon.png) 10px 50% no-repeat #fff;}
-	#loginForm .remember-reg{float:left;width:100%;margin:10px 0 0;font-size:11px;}
-	#loginForm .submit-reg{float:left;width:100%;margin:10px 0 5px;}
-		#loginForm input[type="submit"]{width:100%;margin:0 auto;float:none;display:block;padding:10px;}
-			#loginForm input[type="submit"]:hover{cursor:pointer;}
-	#loginForm .pass-reg{float:left;width:100%;text-align:left;font-size:11px; position: relative; left: 38px;}
-	#loginForm .new-reg{float:left;width:100%; font-size:11px; padding:30px 10px 0 0; position: relative; left: 12px;}
-		#loginForm .new-reg a{vertical-align:middle;float:right;color:#fff;border:1px solid #fff;border-radius:2px;padding:8px;font-size:12px;font-weight:bold;margin:-10px 0 0;transition:0.2s all;-webkit-transition:0.2s all;-moz-transition:0.2s all;-ms-transition:0.2s all;-o-transition:0.2s all;}
-			#loginForm .new-reg a:hover{background:#fff;color:#565656;opacity:1;}
+ 
 
-	#loginForm #wpmem_msg{width: 219px; float: right; border: 1px solid #F05135;border-radius: 2px;background: #FCD7D1;padding: 10px 20px;color: #f05135;margin: 0 -13px 20px; display: none;}
-		#loginForm #wpmem_msg h2{display:none;}
-		#loginForm #wpmem_msg p{color: #f05135;}
-		#loginForm #wpmem_msg a{display:none;}
-
-	#wpmem_reg form div{position:relative;width:96%;}
-	#wpmem_reg form label{float:left;width:100%;text-align:left;padding:8px 2% 10px 0;}
-	#wpmem_reg form div input{width:100%;}
-		#wpmem_reg form div input.failed, #newMem .fail{border:2px solid #F05135;}
-		#wpmem_reg form div .failAlert{position: absolute;top: 0;left:-155px;background: #f05135;border-radius: 2px;color: #fff;width: 120px;padding: 8px 10px;white-space:normal;}
-			#wpmem_reg form div .failAlert:after{height:15px;width:8px;content:'';background:url(../images/failCaret.png) no-repeat;position:absolute;top:7px;right:-7px;}
-
-	#wpmem_reg input#tos{margin: 0px 0.5ex 3px;width: auto !important;float: left;display: inline-block;vertical-align: top;}
-	label[for="aeh_visibility"]{float:left !important;width:auto !important;}
-	#wpmem_reg form div.div_checkbox{float:left !important;width:auto !important;white-space:nowrap;}
-		input#aeh_visibility {margin: 9px 0;}
-		#wpmem_reg .button_div input[type="submit"] {float: right;width: auto !important;}
-	#loginregister #memberReg{width:100%;}
-
-	.div_checkbox.failed{padding:10px;border:2px solid #F05135;}
-
-
-span.imisFound {background: none repeat scroll 0 0 #E4FFFD;border: 1px solid #28BDB3;color: #28BDB3;display: block;margin:0 auto 20px;padding: 10px 20px;width: 400px;text-align:center;}
-span.imisError {background: none repeat scroll 0 0 #FCD7D1;border: 1px solid #F05135;color:#F05135;display: block;margin:0 auto 20px;padding: 10px 20px;width: 400px;text-align:center;}
-#loginForm.verif .new-reg{display:none;}
-#loginForm.verif input.password, #loginForm.verif input.username{border:1px solid #dfdfdf;}
-#loginForm.verif {float: none;margin: 0 auto;width: 200px;}
-
-#newMem table.onehalf{width:46%;margin:0 2%;background:#F0F0F0;}
-#newMem input[type="submit"]{background: none repeat scroll 0 0 #F05135;border-radius: 3px;float:right;color:#fff;border:none;padding: 5px 10px;margin: 10px 3%;}
-
-#wannalogin{float:left;width:100%;text-align:left;padding:25px 0 0;margin:25px 0 0;border-top:1px solid #ccc;}
-	#wannalogin .fugghedabatit{color:#F05135; text-align: center; border:1px solid #F05135;border-radius:2px;padding:5px 10px;margin: 10px 0px 0px 0px;display:block;width:100px;transition:0.2s all;-webkit-transition:0.2s all;-moz-transition:0.2s all;-ms-transition:0.2s all;-o-transition:0.2s all;}
-		#wannalogin .fugghedabatit:hover{color:#fff;border:1px solid #F05135;background:#f05135;cursor:pointer;}
-
-#loginForm > div {clear: both;float: left;}
-#my-profile-wpm form label[for="username"], #my-profile-wpm form p.noinput{display:none;}
 
 
 input[name="aeh_visibility"]{padding: 10px;margin: 10px !important;display: inline;width: auto !important;height: auto;}

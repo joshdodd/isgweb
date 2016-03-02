@@ -8,47 +8,113 @@ $(document).ready(function(){
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-//NEW FUNCTIONS!
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-	//$("#add_err").css('display', 'none', 'important');
  
-
+//HEADER LOGIN FORM HANDLING
 	$("#loginform").submit(function(e){
 		e.preventDefault();
-		console.log('submitted');
-
+ 
 		var email = $("#name").val();
 		var	password = $("#word").val();
-		console.log(password);
+ 
+
+		//Hide previous Error message
+		$('#loginForm #wpmem_msg').slideUp(200);
 
 		$.ajax({
 			type: "POST",
 			url: ajaxurl,
-			data: {email:email,
-					password:password,
-					action:'login_authenticate'}
+			data: {
+				email:email,
+				password:password,
+				action:'login_authenticate'
+			},
+			beforeSend: function() {
+				
+				$("#login_submit").attr('value', '...');
+			}
 		}).done(function(response){
-			console.log(response);
-
+ 
+			$("#login_submit").attr('value', '');
 			if(response){
 				if(response == 0){
-					$("#wpmem_msg").show();
+					$('#loginForm #wpmem_msg').slideDown(200);
+					$("#login_submit").attr('value', 'Login');
 				}
-			 	else{
-					$(".tester").html("Success");
+			else{
+					//$(".tester").html(response);
+					var emailandtoken = response.split(",");
+
+					var email = emailandtoken[0];
+					var token = emailandtoken[1];
+					var imisid = emailandtoken[2];
+					var memtype = emailandtoken[3];
+
+					console.log("email:" + email);
+					console.log("token:" + token);
+					console.log("imisid:" + imisid);
+					console.log("memtype:" + memtype);
+
+ 
+
+					login_user(email,token,imisid,memtype);  //js funciton below to call Wordpress Login
 				}
-				//console.log(response);
-				// respond and append to table
+ 
+				
+			}
+		});
+	});
+
+
+	$("#loginform-sm").submit(function(e){
+		e.preventDefault();
+ 
+		var email = $("#name-sm").val();
+		var	password = $("#word-sm").val();
+ 
+
+		//Hide previous Error message
+		$('#loginSmall #wpmem_msg-sm').slideUp(200);
+
+		$.ajax({
+			type: "POST",
+			url: ajaxurl,
+			data: {
+				email:email,
+				password:password,
+				action:'login_authenticate'
+			},
+			beforeSend: function() {
+				
+				$("#login_submit-sm").attr('value', '...');
+			}
+		}).done(function(response){
+ 
+			$("#login_submit-sm").attr('value', '');
+			if(response){
+				if(response == 0){
+					$('#loginSmall #wpmem_msg-sm').slideDown(200);
+					$("#login_submit-sm").attr('value', 'Login');
+				}
+			else{
+					//$(".tester").html(response);
+					var emailandtoken = response.split(",");
+
+					var email = emailandtoken[0];
+					var token = emailandtoken[1];
+					var imisid = emailandtoken[2];
+					var memtype = emailandtoken[3];
+
+					console.log("email:" + email);
+					console.log("token:" + token);
+					console.log("imisid:" + imisid);
+					console.log("memtype:" + memtype);
+ 
+
+					login_user(email,token,imisid,memtype);  //js funciton below to call Wordpress Login
+				}
+ 
 				
 			}
 		});
@@ -56,13 +122,73 @@ $(document).ready(function(){
 
 
 
+//FUNCTION TO LOGIN USER AND CALL login_user() in functions.php
+	function login_user(email,token,imisid,memtype){
+		//console.log("!!!"+email);
+
+		$.ajax({
+			type: "POST",
+			url: ajaxurl,
+			data: {
+				email:email,
+				token:token,
+				imisid:imisid,
+				memtype:memtype,
+				action:'login_user'
+			},
+			beforeSend: function() {
+				$("#login_submit-sm").attr('value', 'Logging In...');
+				$("#login_submit").attr('value', 'Logging In...');
+			}
+		}).done(function(response){
+			//console.log("Response is %%%:" + response);
+			location.reload(); //Reload Page (wp_login)
+
+			// $("#login_submit").attr('value', '');
+			// if(response){
+			// 	if(response == 0){
+			// 		//$('#loginForm #wpmem_msg').slideDown(200);
+			// 		$("#login_submit").attr('value', 'error');
+			// 	}
+			// else{
+			// 		$(".tester").html("SSSSSSuccess");
+			// 		location.reload();
+			// 	}
+			// }
+		});
+ 
+	}
 
 
 
 
 
+	//Show Login now nutton on registration page
+	$('<div id="wannalogin">Already have an account?<br><span class="fugghedabatit">Login Now</span></div>').insertAfter('#loginregister #wpmem_reg form div.req-text');
+	
+	//Slide down login form on already registered page
+	$('.fugghedabatit').click(function(){
+		$('#loginBoxPanel').slideToggle(200);
+		$("html, body").animate({ scrollTop: 0 }, 200);
+	});
+
+	$('<span id="memEmail"><em>full url for your linkedin profile. ie: http://www.linkedin.com/person</em></span>').insertAfter('#my-profile-wpm input#linkedin');
+	$('<span id="memEmail"><em>full url for your facebook profile. ie: http://www.facebook.com/person</em></span>').insertAfter('#my-profile-wpm input#facebook');
+ 
 
 
+	//Mobile Login
+	$('#mobileHeader #loginButton').click(function(){
+		$('#loginBoxPanel-mobile').toggleClass('active');
+	});
+
+	$('#my-profile-wpm #wpmem_reg form').submit(function(e){
+		$val = $('select#hospital_name').val();
+		if($val == ''){
+			alert('Please choose a Company/Organization');
+			return false;
+		}
+	});
 
 
 
@@ -213,11 +339,15 @@ $(document).ready(function(){
 		$colWidth = 280;
 	}
 	$masonrycont = $('#fader .items .item');
+
+	 /**********************************
 	$masonrycont.masonry({
 	  columnWidth   : $colWidth,
 	  itemSelector  : '.post',
 	  stamp			: '.stamp',
 	});
+ */
+
 	var msnry = $masonrycont.data('masonry');
 	$('#fader').scrollable({
 		circular: 	 false,
@@ -480,13 +610,18 @@ $(document).ready(function(){
 		var msnry = $masonrycont.data('masonry');
 		colTruncate();
 	}
+
 	//Institute Masonry
+/*************************************************************
 	$masonrycont = $('#institutePostBox');
 	$masonrycont.masonry({
 	  columnWidth: 280,
 	  itemSelector: '.post',
 	  stamp:		'.stamp',
 	});
+
+*/
+
 	var msnry = $masonrycont.data('masonry');
 	//Add New discussion
 	$('button#newdisc').click(function(){
@@ -587,6 +722,8 @@ $(document).ready(function(){
 			$('h2#memtitle').hide();
 		}
 	});
+
+
 	//User AJAX request
 	function userRequest($inputVal){
 		$.ajax({
@@ -603,12 +740,17 @@ $(document).ready(function(){
 	$('#my-profile-wpm ul li').each(function(i){
 		$(this).addClass('profileedit-'+i);
 	});
+
 	$('#memberLogin #wpmem_login div:contains("New User?")').remove();
+
 	$('#newsFeed .post').each(function(){
 		if($(this).index() % 2){
 			$(this).addClass('even');
 		}
 	});
+
+
+
 	//Search/Membernetwork
 	$('#disc-content.orig .reply.sendto').click(function(){
 		$('body').scrollTo('textarea#comment');
@@ -628,6 +770,7 @@ $(document).ready(function(){
 	});
 	$('<span id="memEmail"><em>use your business email to have full access to Member Network features</em></span>').insertAfter('#wpmem_reg input#user_email');
 	$('<span id="memEmail" class="loginreghidden"><em>username cannot be your email address</em></span>').insertAfter('#wpmem_reg input#username');
+
 	$('#siteWrap #memNetwork').click(function(){
 		$('#siteWrap').toggleClass('memnetwork');
 		$('#memberdash').toggleClass('memnetwork');
@@ -877,24 +1020,8 @@ $(document).ready(function(){
 	});
 
  
-	//$('#loginForm form fieldset div[align^="right"]').addClass('speciallittlesnowflakes');
 
-	//Registration and Login
-		//login form placeholders
-	$('#loginForm input[name="log"]').attr('placeholder','email address');
-	$('#loginForm input[name="pwd"]').attr('placeholder','password');
-		//login form error messages
-	if($('#loginForm #wpmem_msg').length > 0){
-		$('#loginBoxPanel').slideDown(200);
-	}
-	$('<div id="wannalogin">Already have an account?<br><span class="fugghedabatit">Login Now</span></div>').insertAfter('#loginregister #wpmem_reg form div.req-text');
-	$('.fugghedabatit').click(function(){
-		$('#loginBoxPanel').slideToggle(200);
-		$("html, body").animate({ scrollTop: 0 }, 200);
-	});
-	$('#loginregister form').removeAttr('action').attr('onsubmit','return valOutput();');
-	$('<span id="memEmail"><em>full url for your linkedin profile. ie: http://www.linkedin.com/person</em></span>').insertAfter('#my-profile-wpm input#linkedin');
-	$('<span id="memEmail"><em>full url for your facebook profile. ie: http://www.facebook.com/person</em></span>').insertAfter('#my-profile-wpm input#facebook');
+
 
 	//iMIS field lengths
 	$('#my-profile-wpm form input[name="designation"]').attr('maxlength','20');
@@ -964,18 +1091,7 @@ $(document).ready(function(){
 		$('#my-profile-wpm input[name="fax"]').val($('select[name="ISFcompany_fax"] option:eq('+$index+')').val());
 	});
 
-	//Mobile Login
-	$('#mobileHeader #loginButton').click(function(){
-		$('#loginBoxPanel-mobile').toggleClass('active');
-	});
 
-	$('#my-profile-wpm #wpmem_reg form').submit(function(e){
-		$val = $('select#hospital_name').val();
-		if($val == ''){
-			alert('Please choose a Company/Organization');
-			return false;
-		}
-	});
 
 	//Onboarding
 	$('#ob-content div#contentSecondary ul li a').click(function(e){
