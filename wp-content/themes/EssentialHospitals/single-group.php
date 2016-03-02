@@ -1,7 +1,7 @@
 <?php /* Template for Group custom post type */
 	get_header();
 
-
+ 
 	$pageTheme = get_field('theme');
 	$mnclass = "mnbanner";
 
@@ -66,23 +66,38 @@
 				$parent = array_reverse(get_post_ancestors($post->ID));
 				$members = get_post_meta($parent[0], 'autp'); //Get legacy members of parent group
 				$imis_code = get_post_meta($parent[0], 'imis_code'); //Get imis code of parent group for new auth
+				$imis_type = get_post_meta($parent[0], 'imis_type'); //Get imis code of parent group for new auth
 			}else{
 				$members = get_post_meta($post->ID, 'autp'); //Get legacy members 
-				$imis_code = get_post_meta($post->ID, 'imis_code'); //Get imis code for new auth
+				$imis_code = get_post_meta($post->ID, 'imis_code', true); //Get imis code for new auth
+				$imis_type = get_post_meta($post->ID, 'imis_type', true); //Get imis code for new auth
+
 			}
 		 
-		 	//Add in logic here to modify checker based on imis Stored Procedure. 
-			//Set up isg auth data
+		 	//Set up isg auth data
 			$isgCheck = false;
-			$imis_type = "COMMITTEE"; //Need to check this - could be JOB_FUNCTION, EVENT, ETC
-
+			$error_alert = false;
+  
 			//get current user email
 			$user_info = get_userdata($currentUser );
 			$user_email = $user_info->user_email;
 
-			if($imis_code !='' && $user_email!=''){
-				//NEED NEW AUTH FUNCITON HERE
-				//$isgCheck = check_webinar_access($user_email,$imis_type ,$imis_code);
+
+			if($imis_code !='' && $imis_type!='' && $user_email!=''){
+				//get all members in group
+				$group_emails = GetGroupMembers($imis_code, $imis_type);
+				if($group_emails == ''){
+					$error_alert = true;
+				}
+				else{
+
+					//check if logged in user is in array of current group
+					if (in_array($user_email, $group_emails))
+					{
+						$isgCheck = true;
+					}
+				}
+
 			}
 
 			//Check legacy member array 
@@ -183,7 +198,21 @@
 				<div class="group-members groupcol">
 					<div class="panel">
 						<h2 class="heading">Group Members</h2>
-						<?php get_template_part('membernetwork/content','groupmembers'); ?>
+
+						<?php if($error_alert == true){ ?>
+							<div class="error wpmem_msg ">
+								<span class="error">There are no members or there is an error with the IMIS_CODE or IMIS_TYPE!</span>
+							</div>
+						<?php }
+						else{ 
+							
+/********************** INSERT NEW LIST FROM IMIS CODES ****************************************************************/
+							?>
+
+							<?php get_template_part('membernetwork/content','groupmembers'); ?>
+
+						<?php } ?>
+
 					</div>
 					<?php if(is_user_logged_in() && $checker == true){ ?>
 					<?php $webinars = get_field('related_webinars');

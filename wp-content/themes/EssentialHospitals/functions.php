@@ -2823,7 +2823,7 @@ function login_user(){
   $token = $_POST['token'];
   $memtype= $_POST['memtype'];
   $imisis= $_POST['imisid'];
-  
+
   $user = get_user_by('email', $email);
   $staff = 0;
 
@@ -2907,6 +2907,53 @@ function DeleteISGsession(){
 add_action('wp_logout', 'DeleteISGsession', 10);
  
 
+
+
+//Get List of Group Users
+//Returns array of emails
+function GetGroupMembers($imis_code, $imis_type){
+ 
+  $params = array(
+    'securityPassword'=> SP_SECURITY_PWD,
+    'name'            => 'aeh_group_emails',
+    'parameters'      => "@type=$imis_type,@code=$imis_code"
+  );
+
+  $result = post_request(IMIS_POST_URL, $params);
+  //print_r($result);
+  if ($result['status'] == 'ok'){//if no status then an error occurred.
+
+
+    
+    $xml = simplexml_load_string($result['content']);
+    if ($xml === false)return false;
+    $xml = dom_import_simplexml($xml);
+    
+    if ($xml === false)return false;
+    $nodelist = $xml->getElementsByTagName('Table');
+    
+
+    if($nodelist->length==0)return false;
+    $len = $nodelist->length;
+    print_r($lens);
+
+    $email_arr = array();
+    $idx = 0;
+
+    //push emails to array
+    while ($idx < $len){
+      $email = $nodelist->item($idx)->getElementsByTagName('WEB_LOGIN');
+      $add_email = $email->item(0)->nodeValue;
+      array_push($email_arr, $add_email);
+      $idx++;
+    }
+
+    return $email_arr;
+  }else{
+    return false;
+  }
+
+}
 
 
 
