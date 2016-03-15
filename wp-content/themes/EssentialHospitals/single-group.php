@@ -71,7 +71,6 @@
 				$members = get_post_meta($post->ID, 'autp'); //Get legacy members 
 				$imis_code = get_post_meta($post->ID, 'imis_code', true); //Get imis code for new auth
 				$imis_type = get_post_meta($post->ID, 'imis_type', true); //Get imis code for new auth
-
 			}
 		 
 		 	//Set up isg auth data
@@ -200,18 +199,18 @@
 						<h2 class="heading">Group Members</h2>
 
 						<?php if($error_alert == true){ ?>
-							<div class="error wpmem_msg ">
+							<!-- <div class="error wpmem_msg ">
 								<span class="error">There are no members or there is an error with the IMIS_CODE or IMIS_TYPE!</span>
-							</div>
+							</div> -->
 						<?php }
-						else{ 
+					 
 							
-/********************** INSERT NEW LIST FROM IMIS CODES ****************************************************************/
+/********************* ****************************************************************/
 							?>
 
 							<?php get_template_part('membernetwork/content','groupmembers'); ?>
 
-						<?php } ?>
+						<?php  ?>
 
 					</div>
 					<?php if(is_user_logged_in() && $checker == true){ ?>

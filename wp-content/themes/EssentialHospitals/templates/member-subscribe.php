@@ -87,8 +87,7 @@ if ($usermeta !=""){$customnewsfeed = unserialize($usermeta);}
 	</div>
 <?php
 			}else{
-				header('Location: http://meshdevsite.com/membercenter/member-login/');
-		}
+				header('Location: http://essentialhospitals.org/membernetwork/member-login/');		}
 ?>
 
 	</div>

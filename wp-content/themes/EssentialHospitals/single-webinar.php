@@ -19,17 +19,29 @@
 		<?php
 			//Set up isg auth data
 			$isgCheck = false;
+			$error_alert = false;
 			$imis_code = get_post_meta($post->ID, 'imis_code');  // get iMIS code post meta
-			$imis_type = "CONFCALL"; //may change to post_meta / custom field?
+			$imis_type = get_post_meta($post->ID, 'imis_type', true); //Get imis code for new auth
 
 			//get current user info
 			$currentUser = get_current_user_id();
 			$user_info = get_userdata($currentUser );
 			$user_email = $user_info->user_email;
 
-			if($imis_code !='' && $user_email!=''){
-				//NEED NEW AUTH FUNCITON HERE
-				//$isgCheck = check_webinar_access($user_email,$imis_type ,$imis_code);
+			if($imis_code !='' && $imis_type!='' && $user_email!=''){
+				//get all members in group
+				$group_emails = GetGroupMembers($imis_code, $imis_type);
+				if($group_emails == ''){
+					$error_alert = true;
+				}
+				else{
+
+					//check if logged in user is in array of current group
+					if (in_array($user_email, $group_emails))
+					{
+						$isgCheck = true;
+					}
+				}
 			}
 
 			//Check legacy member array 

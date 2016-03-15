@@ -30,7 +30,7 @@ $currentUser = get_current_user_id();
 
 <?php
 			}else{
-				header('Location: http://meshdevsite.com/membercenter/member-login/');
+				header('Location: http://essentialhospitals.org/membernetwork/member-login/');
 		}
 ?>
 

@@ -30,8 +30,8 @@
 					</div>
 
 					<div class="clear"></div>
-					<div align="right" class="pass-reg "><a href="http://localhost/essentialhospitals/membernetwork/my-profile/?a=pwdreset">Forgot your password?</a></div>
-					<div align="right" class="new-reg ">Don't have an account?&nbsp;<a href="http://localhost/essentialhospitals/membernetwork/registration/">Sign up</a></div>
+					<div align="right" class="pass-reg "><a href="<?php echo get_bloginfo('url' ); ?>/membernetwork/reset-password/">Forgot your password?</a></div>
+					<div align="right" class="new-reg ">Don't have an account?&nbsp;<a href="<?php echo get_bloginfo('url' ); ?>/membernetwork/registration/">Sign up</a></div>
 					<div class="clear"></div>
 					<div class="tester"> </div>
 				</fieldset>

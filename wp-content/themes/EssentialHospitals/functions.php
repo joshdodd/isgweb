@@ -2904,7 +2904,7 @@ function DeleteISGsession(){
 }
  
  
-add_action('wp_logout', 'DeleteISGsession', 10);
+//add_action('wp_logout', 'DeleteISGsession', 10);
  
 
 

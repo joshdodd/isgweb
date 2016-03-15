@@ -26,11 +26,11 @@ $token = get_user_meta($currentUser, 'isg_token', true );
 
  
     <div id="membernetwork">
-        <div class="container">
+        <div class="container" style=" ">
             <h1 class="title"><span class="grey">Essential Hospitals</span> Member Network | My Profile</h1>
             <?php get_template_part('membernetwork/content','usernav'); $output = "";?>
 
-            <div <?php if(!is_user_logged_in()){echo "id='mem-redirect'";} ?> class="groupcol clearfix <?php if(!is_user_logged_in()){echo "floatleft fullwidth";}else{echo "group-details";}?>">
+            <div <?php if(!is_user_logged_in()){ } ?> class="groupcol clearfix <?php if(!is_user_logged_in()){echo "floatleft fullwidth";}else{echo "prof-edit";}?>">
                 <?php if(is_user_logged_in()){
 
                 	//REMOVE THIS
@@ -38,21 +38,30 @@ $token = get_user_meta($currentUser, 'isg_token', true );
 
                 	//VIEW PROFILE ISGWEB IFRAME
 					?>
-                	<iframe src='https://isgweb.essentialhospitals.org/ISGweb/Profile/ViewProfile.aspx?Token=<?php echo $token; ?>' isgwebsite="1" name="ISGwebContainer" id="ISGwebContainer" marginwidth="1" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="no" width="100%" style="overflow:visible; height: 4000px; display:block;"> Sorry, your browser doesn't support iframes. </iframe> 
+                	<iframe src='https://isgweb.essentialhospitals.org/ISGweb/Profile/ViewProfile.aspx?Token=<?php echo $token; ?>' isgwebsite="1" name="ISGwebContainer" id="ISGwebContainer" marginwidth="1" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="yes" width="100%" style="overflow:visible; height: 1500px; display:block;"> Sorry, your browser doesn't support iframes. </iframe> 
 
 					<?php 
 
 
-                }else{
-	                the_content();
-                } ?>
+                }else{ ?>
+	                 <div class="panel signin">
+                    <div class="gutter">
+                        <?php get_template_part('partial/login','smallform'); ?>
+                    </div>
+                </div>
+
+
+             <?php   } ?>
             </div>
 
-            <?php if(is_user_logged_in()){
+            <?php 
+            if(is_user_logged_in()){
 	            if($aeh_member == 'hospital'){
-            	echo '<div class="group-members groupcol">';
-            	include(locate_template('/membernetwork/module-profileContacts.php'));
-            	echo '</div>'; } } ?>
+             
+            	//include(locate_template('/membernetwork/module-profileContacts.php'));
+                    //PUT PROFILE PIC EDIT HERE
+            	 } 
+            } ?>
 
 			<?php if(is_user_logged_in()){ ?>
             <div class="group-resources groupcol">

@@ -10,82 +10,33 @@ get_header();
 				<h2 class='heading'>Registration</h2>
 				<div id="loginregister" class="floatleft onehalf">
 					<div id="memberReg">
-						<div id="wpmem_reg">
+						 
 							<div class="gutter">
-								<?php echo do_shortcode('[wp-members page="register"]'); ?>
+								<?php //echo do_shortcode('[wp-members page="register"]'); ?>
+
+								<iframe src='https://isgweb.essentialhospitals.org/ISGweb/Profile/CreateNewUser.aspx?iWebContinuePage=%2fISGweb%2fProfile%2fEditProfile.aspx' isgwebsite="1" name="ISGwebContainer" id="ISGwebContainer" marginwidth="1" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="no" width="100%" style="overflow:hidden; height: 1000px; display:block;"> Sorry, your browser doesn't support iframes. </iframe> 
+ 
+
 							</div>
-						</div>
+					 
 					</div>
 				</div>
 				<div class="floatleft onehalf" id="reg-cont">
 					<div class="gutter">
-						<?php the_content(); ?>
+						<?php 
+							if ( have_posts() ) {
+								while ( have_posts() ) {
+									the_post(); 
+									the_content(); 
+								} // end while
+							} // end if
+							?>
+				 
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-<script type="text/javascript">
-	function validateEmail(email) {
-	    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-	    return re.test(email);
-	}
-	function valOutput(){
-		$title = $('select#prefix').val();
-		$first_name = $('input#first_name').val();
-		$last_name = $('input#last_name').val();
-		$email = $('input#user_email').val();
-			$emailValidate = validateEmail($email);
-		$password = $('input#password').val();
-		$tos = $('input#tos');
 
-		$('#wpmem_reg *').removeClass('failed');
-		$('.failAlert').remove();
-
-
-
-		$validate = true;
-		$nonce = Math.floor((Math.random()*10000)+1);
-		$('input#username').val($first_name+$last_name+$nonce);
-		if($first_name == ''){
-			$validate = false;
-			$('input#first_name').addClass('failed');
-			$('<div class="failAlert">first name required</div>').insertAfter('input#first_name');
-		}
-		if($last_name == ''){
-			$validate = false;
-			$('input#last_name').addClass('failed');
-			$('<div class="failAlert">last name required</div>').insertAfter('input#last_name');
-		}
-		if($email == ''){
-			$validate = false;
-			$('input#user_email').addClass('failed');
-			$('<div class="failAlert">email required</div>').insertAfter('input#user_email');
-		}
-		if($emailValidate != true){
-			$validate = false;
-			$('input#user_email').addClass('failed');
-			$('<div class="failAlert">email is not valid</div>').insertAfter('input#user_email');
-		}
-		if($password == ''){
-			$validate = false;
-			$('input#password').addClass('failed');
-			$('<div class="failAlert">password required</div>').insertAfter('input#password');
-		}else if($password.length < 7){
-			$validate = false;
-			$('input#password').addClass('failed');
-			$('<div class="failAlert">password must be more than 6 characters long</div>').insertAfter('input#password');
-		}
-		if(!($tos).is(':checked')){
-			$validate = false;
-			$('input#tos').parent().addClass('failed');
-			$('<div class="failAlert">you must agree to the Terms of Service</div>').insertAfter('input#tos');
-		}
-		if($validate == false){
-			return false;
-		}
-
-	}
-</script>
 <?php get_footer('sans'); ?>
